@@ -1,0 +1,106 @@
+.progress-bar-container {
+    font-family: Arial, sans-serif;
+    /* background-color: #2f4f3c; */
+    margin: 0;
+    padding: 0;
+    /* width: 50%; */
+    height: 200px;
+  }
+
+  .overview-content{
+    margin-top: -30px;
+    /* background-color: grey; */
+  }
+  .overview-content h2{
+    color: #D2CF96;
+    font-size: 29px;
+  }
+  .overview-content p{
+    margin-top: -30px;
+    font-size: 14px;
+  }
+
+  .cardd-container{
+    margin-top: -12px;
+  }
+  .cardd {
+    background-color: #478164;
+    border-radius: 15px;
+    border: 1px #000;
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    color: #e3e3b3; /* Light yellow text */
+    margin-bottom: 6px;
+  }
+
+  .card-title {
+    font-size: 13px;
+    font-weight: bold;
+    /* margin-bottom: 5px; */
+    margin-left: 10px;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin-bottom: 2px; */
+    margin-left: 10px;
+  }
+
+  .item-left {
+    display: flex;
+    align-items: center;
+    width: 120px;
+    font-size: 12px;
+  }
+
+  .item-icon {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .icon-yellow, .icon-ygreen, .icon-lgreen, .icon-dgreen{
+    width: 8px;
+    height: 8px;
+  }
+
+  .icon-yellow {
+    background-color: #FFF67E; /* Yellow */
+  }
+  .icon-ygreen {
+    background-color:rgb(182, 255, 64); /* Light green */
+  }
+  .icon-lgreen {
+    background-color:rgb(130, 198, 34); /* Light green */
+  }
+  .icon-dgreen {
+    background-color:rgb(42, 79, 7); /* Light green */
+  }
+
+  .progress-bar {
+    flex: 1;
+    background-color: #3a7b50; /* Dark green progress track */
+    height: 8px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 10px;
+  }
+
+  .progress {
+    background-color: #fad259; /* Yellow progress */
+    height: 100%;
+    width: 40%; /* Adjust percentage here */
+  }
+
+  .item-right {
+    font-weight: bold;
+    width: 70px;
+    font-size: 12px;
+  }
+
+  .item-right span {
+    color: #e3e3b3; /* Light yellow for amount */
+  }

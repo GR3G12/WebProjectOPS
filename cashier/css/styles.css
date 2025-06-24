@@ -1,0 +1,604 @@
+*{
+    font-family: 'Piazzolla', sans-serif;
+}
+/* General Body Styling */
+body {
+    font-family: 'Piazzolla', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* overflow-x: hidden; Prevent horizontal scrolling */
+    box-sizing: border-box; /* Include padding and border in total width */
+}
+
+/* Universal Selector for Box Sizing */
+*,
+*::before,
+*::after {
+    box-sizing: inherit; /* Inherit box-sizing from body */
+}
+
+/* Header Styling */
+/* Custom Header Styles */
+.custom-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff; /* Header background color */
+    color: #fff; /* Text color */
+    padding: 8px 20px; /* Padding */
+    position: fixed; /* Fixed position */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays on top */
+    box-shadow: 2px 0 5px rgba(0, 62, 41, 0.9);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.logo img {
+    margin-right: 10px; /* Space between logo and text */
+    margin-left: 10px; /* Space between logo and text */
+}
+
+.logo span {
+    font-size: 1.5em;
+    color: #003E29;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+    margin-left: 20px;
+}
+
+.nav-link {
+    color: white; /* Text color */
+    text-decoration: none;
+}
+
+.badge {
+    background-color: red; /* Badge background */
+    color: white; /* Badge text color */
+    border-radius: 50%; /* Circle shape */
+    padding: 0 5px; /* Padding */
+}
+
+
+/* msaster */
+/* Container Styles */
+.container {
+    display: flex; /* Use flexbox for layout */
+    height: 100vh; /* Full height */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: auto; /* Width of sidebar */
+    /* width: -150px; */
+    /* background-color: #343a40; */
+    /* background: linear-gradient(180deg, #003E29, #0D7C66, #41B3A2); */
+    color: #fff; /* Text color */
+    padding: 20px; /* Inner padding */
+    height: 100vh; /* Full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Main Content Styles */
+.content {
+    flex: 1; /* Take remaining space */
+    padding: 20px; /* Inner padding for content */
+    background-color: #f8f9fa; /* Main content background */
+    overflow-y: auto; /* Scroll if content overflows */
+}
+
+
+/* Sidebar Styling */
+aside.sidebar {
+    position: fixed;
+    top: 45px; /* Height of the header */
+    left: 0;
+    width: 230px; /* Default width of the sidebar */
+    height: calc(100vh - 40px); /* Full viewport height minus header height */
+    z-index: 900;
+    background-color: rgba(0, 62, 41, 0.9);
+    padding: 20px;
+    /* overflow-y: auto; */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    /* margin-top: 10px; */
+    justify-content: space-between;
+}
+
+/* Sidebar Header Styling */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px;
+    width: 100%;
+    /* background-color: #ffffff; */
+    border-radius: 5px;
+    height: 120px;
+    overflow: hidden;
+}
+
+.sidebar-header img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    /* background-color: #ffffff; */
+}
+
+.sidebar-header h4 {
+    font-size: 20px;
+    color: #fff; /*#D2CF96 Makes the text white to contrast with the background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar Navigation Styling */
+/* Adjust nav styling */
+.sidebar .nav {
+    padding: 0; /* Remove padding */
+    list-style: none; /* No bullets */
+}
+.sidebar li{
+    margin: 0;
+    display: flex;   
+}
+
+/* Nav item styling */
+.sidebar .nav-item {
+    margin-bottom: 2px; /* Space between items */
+    font-size: 18px; /* Font size */
+}
+
+/* Nav link styling */
+.sidebar .nav-link {
+    color: white;
+    /* transition: background-color 0.3s, color 0.3s; */
+    width: calc(100% - 20px); /* Fill width with margin accounted */
+    display: flex; /* Use flex to align items */
+    padding: 10px 20px; /* Match padding with header */
+    box-sizing: border-box; /* Include padding in width */
+    width: 100%;
+    justify-content: flex-start;
+    transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease; 
+}
+
+.sidebar .nav-item i{
+    font-size: 22px;
+    /* color: #D2CF96; */
+}
+/* Adjust icon size in the navigation item */
+.icon-size {
+    font-size: 1.9em; /* Adjust the size as needed */
+    /* You can also use the transform scale method if needed */
+    /* transform: scale(1.5); */
+    color: #fff; /* Optional: set the icon color */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+/* Span styling */
+.sidebar .nav-link span {
+    margin-left: 10px;
+}
+/* Style for active link */
+.sidebar .nav-link.active {
+    /* background-color: #fff; */
+    background-color: rgba(170, 181, 144, 0.44); /* 0.44 = 44% opacity */
+    color: #fff;
+    /* color: #D2CF96; */
+    font-weight: bold;
+    width: 100%;
+    border-radius: 50px;
+    border: 1px solid #fff; /* Add solid border */
+    height: auto;
+    transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+}
+/* Hover effect for all links */
+.sidebar .nav-link:hover {
+    background-color: rgba(197, 216, 147, 0.44); /* 0.44 = 44% opacity */
+    /* color: #D2CF96; */
+    color: #fff;
+    width: 100%;
+    border-radius: 50px;
+    border: 1px solid #fff; /* Add solid border */
+    margin: 0;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.sidebar-footer{
+    background-color: #003E29;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+.sidebar-footer:hover{
+    background-color: #006f4a;
+    border-radius: 5px;
+    position: relative;
+    transform: scale(1.05);
+}
+
+.sidebar .nav-link-logout{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    align-items: center;
+    text-decoration: none;  
+    
+}
+.sidebar-footer i{
+    color: #fff;
+}
+.sidebar-footer span,.sidebar-footer-a span{
+    color: #fff;
+    font-size: 18px;
+}
+
+.sidebar-footer-a form{
+    text-align: center;
+    width: 100%;
+}
+.sidebar-footer-a form button{
+    background-color: #003E29;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+    color: #fff;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    padding: 5px;
+    border: none;
+}
+.sidebar-footer-a form button:hover{
+    background-color: #006f4a;
+    border-radius: 5px;
+    position: relative;
+    transform: scale(1.05);
+}
+
+
+
+/* Dashboard Styling */
+.dashboard-content {
+    padding: 20px;
+    margin-top: auto;
+    font-family: Arial, sans-serif;
+}
+
+.top-box {
+    display: flex;
+    justify-content: space-between; /* Space between boxes */
+    margin-bottom: 20px; /* Space below the top boxes */
+    gap: 20px; /* Space between the boxes */
+}
+
+.dashboard-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    margin-top: 20px; /* Adds space between top boxes and cards */
+}
+
+
+/* Main Content Styling */
+main.content {
+    margin-left: 190px; /* Width of the sidebar */
+    margin-top: 26px; /* Height of the header */
+    padding: 15px;
+    background-image: url("../imgs/school.png");
+    background-size: cover;
+    background-position: center; 
+    min-height: calc(100vh - 56px); /* Ensure it fills remaining height */
+    transition: margin-left 0.3s ease;
+    box-sizing: border-box; /* Ensure padding does not create extra space */
+}
+/* Overlay effect */
+main.content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* White overlay with 60% opacity */
+    z-index: 0; /* Place it behind content */
+}
+
+/* Ensure content is on top of overlay */
+main.content > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive Design: Adjusting for smaller screens */
+@media (max-width: 992px) {
+    aside.sidebar {
+        width: 200px; /* Adjust width for medium screens */
+    }
+
+    main.content {
+        margin-left: 200px; /* Adjust margin for medium screens */
+    }
+}
+
+
+@media (max-width: 576px) {
+    aside.sidebar {
+        padding: 10px; /* Adjust padding for very small screens */
+    }
+
+    .sidebar .nav-link {
+        font-size: 0.875rem; /* Smaller font size */
+    }
+}
+
+/* Footer Styling */
+footer {
+    /* position: relative; */
+    bottom: 0;
+    width: 100%;
+    padding: 5px 0; /* Vertical padding */
+    background-color: #ffffff;
+    color: #000000; /* White text color */
+    text-align: right;
+    padding-right: 10px;
+    height: auto; /* Flexible height */
+    /* box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); Optional shadow for separation */
+}
+
+footer p {
+    margin: 5px 0; /* Adjust margin for paragraphs */
+    display: inline-block; /* Display paragraphs inline */
+}
+
+footer a {
+    color: #000000; /* White text for links */
+    text-decoration: none; /* Remove underline from links */
+    margin: 0 5px; /* Margin between links */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+
+
+
+/* Responsive Design for Mobile Screens */
+/* Sidebar Navigation Styling for Mobile - Show Only Icons */
+@media (max-width: 768px) {
+
+    /* Header adjustments */
+    .custom-header {
+        position: fixed;
+        z-index: 2; /* Ensure header is always on top of the sidebar */
+        padding: 5px;
+        font-size: 15px;
+    }
+
+    .online-payment {
+        display: none; /* Hides only the span with "Online Payment System" */
+    }
+
+    /* Sidebar */
+    aside.sidebar {
+        width: 40px; /* Reduced width for icons only */
+        height: 100vh; /* Full viewport height */
+        position: fixed;
+        top: 45px; /* Below the header */
+        left: 0;
+        padding: 10px 0; /* Remove inner padding */
+        padding-left: 5px;
+        z-index: 900;
+        background-color: rgba(0, 62, 41, 0.9);
+        transition: width 0.3s ease; /* Smooth transition for expanding/collapsing */
+    }
+
+    /* Sidebar Navigation Links */
+    .sidebar .nav-link {
+        justify-content: center; /* Center the icons */
+        padding: 10px 0; /* Reduced padding for a compact look */
+        font-size: 0.875rem; /* Slightly smaller font */
+        display: flex;
+        flex-direction: column; /* Stack icon and text vertically */
+    }
+
+    /* Hide text on nav links */
+    .sidebar .nav-link span {
+        display: none; /* Hide the text */
+    }
+
+    /* Adjust icon size */
+    .sidebar .nav-link i {
+        font-size: 1.5rem; /* Increase icon size for visibility */
+    }
+
+    /* Main Content */
+    main.content {
+        margin-left: 0;
+        margin-top: 10px; /* Maintain space for the header */
+        padding: 15px;
+        transition: margin-left 0.3s ease;
+    }
+
+    /* Sidebar Header */
+    .sidebar-header{
+        width: 10px;
+        height: auto;
+        margin-left: -25px;
+    }
+
+    .sidebar-header h4 {
+        display: none; /* Hide header text */
+    }
+
+    .sidebar-header img {
+        width: 28px;
+    }
+
+    /* Style for active link */
+    .sidebar .nav-link.active {
+        background-color: #fff; /* Highlight color */
+        color: #000000; /* Text color */
+        font-weight: bold; /* Optional: make text bold */
+        width: 85%;
+        border-radius: 50px;
+        padding-top: 15px; /* Adjust top padding for height */
+        padding-bottom: 15px; /* Adjust bottom padding for height */
+        height: auto;
+        transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+    }
+    /* Hover effect for all links */
+    .sidebar .nav-link:hover {
+        background-color: #ffffff; /* Hover color */
+        color: #000; /* Text color on hover */
+        width: 85%;
+        border-radius: 50px;
+        transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+    }
+    /* .sidebar-footer{
+        width: 30px;
+    } */
+
+    .sidebar-footer span{
+        display: none;
+    }
+
+    footer p {
+        margin: 5px 0; /* Adjust margin for paragraphs */
+        display: inline-block; /* Display paragraphs inline */
+        font-size: 10px;
+    }
+    
+    footer a {
+        color: #000000; /* White text for links */
+        text-decoration: none; /* Remove underline from links */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Header adjustments */
+    .custom-header {
+        position: fixed;
+        z-index: 2; /* Ensure header is always on top of the sidebar */
+        padding: 5px;
+        font-size: 12px;
+    }
+    .online-payment {
+        display: none; /* Hides only the span with "Online Payment System" */
+    }
+    /* Sidebar */
+    aside.sidebar {
+        width: 40px; /* Reduced width for icons only */
+        height: 90vh; /* Full viewport height */
+        position: fixed;
+        top: 45px; /* Below the header */
+        left: 0;
+        padding: 10px 0; /* Remove inner padding */
+        padding-left: 5px;
+        z-index: 900;
+        background-color: rgba(0, 62, 41, 0.9);
+        transition: width 0.3s ease; /* Smooth transition for expanding/collapsing */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Sidebar Navigation Links */
+    .sidebar .nav-link {
+        justify-content: center; /* Center the icons */
+        padding: 10px 0; /* Reduced padding for a compact look */
+        font-size: 10px; /* Slightly smaller font */
+        display: flex;
+        flex-direction: column; /* Stack icon and text vertically */
+    }
+
+    /* Hide text on nav links */
+    .sidebar .nav-link span {
+        display: none; /* Hide the text */
+    }
+    /* Adjust icon size */
+    .sidebar .nav-link i {
+        font-size: 10px; /* Increase icon size for visibility */
+    }
+
+    /* Main Content */
+    main.content {
+        margin-left: 0;
+        margin-top: 10px; /* Maintain space for the header */
+        padding: 15px;
+        transition: margin-left 0.3s ease;
+    }
+
+    /* Sidebar Header */
+    .sidebar-header{
+        width: 20px;
+        height: auto;
+        margin-left: -25px;
+    }
+
+    .sidebar-header h4 {
+        display: none; /* Hide header text */
+    }
+    .sidebar .nav-item i{
+        font-size: 22px;
+        /* color: #D2CF96; */
+    }
+
+    .sidebar-header img {
+        width: 28px;
+    }
+
+    /* Style for active link */
+    .sidebar .nav-link.active {
+        background-color: rgba(170, 181, 144, 0.44);
+        color: #000000; /* Text color */
+        font-weight: bold; /* Optional: make text bold */
+        width: 85%;
+        border-radius: 25px;
+        transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+    }
+    /* Hover effect for all links */
+    .sidebar .nav-link:hover {
+        background-color: rgba(170, 181, 144, 0.44);
+        color: #000; /* Text color on hover */
+        width: 90%;
+        border-radius: 25px;
+        transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+    }
+
+    .sidebar-footer{
+        width: 30px;
+    }
+
+    footer p {
+        margin: 5px 0;
+        display: inline-block; /* Display paragraphs inline */
+        font-size: 10px;
+    }
+    
+    footer a {
+        color: #000000; /* White text for links */
+        text-decoration: none; /* Remove underline from links */
+    }
+
+}

@@ -1,0 +1,613 @@
+*{
+    font-family: 'Piazzolla', sans-serif;
+}
+/* General Body Styling */
+body {
+    font-family: 'Piazzolla', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    /* overflow-x: hidden; Prevent horizontal scrolling */
+    box-sizing: border-box; /* Include padding and border in total width */
+}
+
+/* Universal Selector for Box Sizing */
+*,
+*::before,
+*::after {
+    box-sizing: inherit; /* Inherit box-sizing from body */
+}
+
+/* Header Styling */
+/* Custom Header Styles */
+.custom-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff; /* Header background color */
+    color: #fff; /* Text color */
+    padding: 8px 20px; /* Padding */
+    position: fixed; /* Fixed position */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.logo img {
+    margin-right: 10px; /* Space between logo and text */
+    margin-left: 10px; /* Space between logo and text */
+}
+
+.logo span {
+    font-size: 1.5em;
+    color: #003E29;
+    font-weight: bold;
+}
+
+.custom-header .profile-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.custom-header .profile-image img{
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.custom-header .profile-image h4{
+    color: #035607;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+    margin-left: 20px;
+}
+
+.nav-link {
+    color: #fff; /* Text color */
+    text-decoration: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.badge {
+    background-color: red; /* Badge background */
+    color: white; /* Badge text color */
+    border-radius: 50%; /* Circle shape */
+    padding: 0 5px; /* Padding */
+}
+
+
+/* msaster */
+/* Container Styles */
+.container {
+    display: flex; /* Use flexbox for layout */
+    height: 100%; /* Full height */
+}
+
+
+/* Main Content Styles */
+.content {
+    flex: 1; /* Take remaining space */
+    padding: 20px; /* Inner padding for content */
+    background-color: #f8f9fa; /* Main content background */
+    overflow-y: auto; /* Scroll if content overflows */
+}
+
+/* Dashboard Styling */
+.dashboard-content {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.top-box {
+    display: flex;
+    justify-content: space-between; /* Space between boxes */
+    margin-bottom: 20px; /* Space below the top boxes */
+    gap: 20px; /* Space between the boxes */
+    color: #fff;
+    border-color: #003E29;
+}
+
+/* announcement */
+.announcement-box,
+.event-box {
+    /* border: 1px solid #ccc; */
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #559977;
+    /* flex: 1;  */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    height: auto; /* 300px */
+    margin-bottom: 10px;
+}
+
+.announcement-box h3,
+.event-box h3{
+    margin-top: 0;
+}
+
+.announcement-box{
+    width: 45%;
+    height: 300px;
+    /* overflow: hidden;     */
+}
+
+.announcement-header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 30px;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+}
+
+.overview-header{
+    display: flex;
+    justify-content: space-between; /* Space between boxes */
+    flex-wrap: wrap;
+    height: 30px;
+    /* background-color: grey; */
+    border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+}
+
+.event-box {
+    width: 55%;
+    /* width: 35%; */
+    margin-right: 0; /* Remove margin for the last box */
+    overflow: hidden;
+}
+
+.college-accu .shs-accu{
+    background-color: #003E29;
+}
+
+.add-button{
+    background-color: #D2CF96;
+    border-radius: 20px;
+    border-color: transparent;
+    /* position: absolute; */
+    height: 25px;
+    width: 55px;
+    font-weight: bold;
+}
+.add-button:hover {
+    background-color: #218838;
+}
+.view-button{
+    background-color: #D2CF96;
+    border-radius: 20px;
+    border-color: transparent;
+    /* position: absolute; */
+    height: 25px;
+    width: 55px;
+    font-weight: bold;
+}
+.view-button:hover {
+    background-color: #218838;
+}
+.filter-button{
+    background-color: #D2CF96;
+    border-radius: 20px;
+    border-color: transparent;
+    /* position: absolute; */
+    height: 25px;
+    /* width: 95px; */
+    font-weight: bold;
+    justify-content: right;
+    padding: 2px 10px;
+}
+
+.filter-button:hover{
+    background-color: #218838;
+    color: #fff;
+}
+
+.overview-bottom{
+    margin-top: -10px;
+}
+
+/* announcement design */
+.announcement-content {
+    /* background-color: #003E29; */
+    width: 100%;
+    height: 90%; /* Set fixed height for scrolling */
+    display: flex;
+    flex-direction: column; /* Ensure items stack vertically */
+    justify-content: flex-start;
+    align-items: center;
+    position: relative; /* Ensure the arrows are positioned relative to this container */
+    border-radius: 10px; /* Optional: Add rounded corners for better aesthetics */
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); */
+    padding: 0;
+    margin: 0;
+    overflow: hidden; /* Hide overflow from the parent container */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Left and right arrow buttons */
+.arrow-button {
+    position: absolute;
+    top: 50%; /* Vertically center the arrow */
+    transform: translateY(-50%); /* Adjust position to perfectly center */
+    background-color: rgba(0, 0, 0, 0);
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 10; /* Ensure buttons are above the content */
+    border-radius: 10px;
+}
+
+/* Left arrow */
+.arrow-left {
+    left: -10px; /* Position on the left side */
+    font-size: 40px;
+}
+
+/* Right arrow */
+.arrow-right {
+    right: -10px; /* Position on the right side */
+    font-size: 40px;
+}
+
+/* announcement list */
+/* Ensure the content area can scroll */
+.announcement-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 300px; /* Fixed height for demonstration purposes */
+    overflow-y: auto; /* Allow scrolling */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: rgba(0, 0, 0, 0.5) transparent; /* For Firefox (thumb with 50% opacity) */
+}
+
+/* Webkit scrollbar styling (for Chrome/Safari) */
+.announcement-list::-webkit-scrollbar {
+    width: 8px; /* Adjust the width of the vertical scrollbar */
+}
+
+.announcement-list::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5); /* Thumb color with 50% opacity */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.announcement-list::-webkit-scrollbar-track {
+    background-color: transparent; /* Track color */
+}
+
+/* announcement item */
+.announcement-item {
+    border-radius: 5px;
+    margin: 0;
+    padding: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+    opacity: 0;
+    transform: translateX(-100%); /* Start off-screen */
+    visibility: hidden; /* Hidden when inactive */
+    position: absolute; /* Positioning to prevent layout shift */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out, visibility 0s 1s; /* Visibility transition after opacity */
+}
+
+/* show active item */
+.announcement-item.active {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible; /* Make it visible when active */
+    position: relative; /* Reset the position when active */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out, visibility 0s; /* Smooth transition */
+}
+
+.announcement-item h4 {
+    font-size: 19px;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.announcement-item p {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+.announcement-item .content-box {
+    height: 145px;
+    color: #ffffff;
+}
+.announcement-item .content-p {
+    /* height: 145px; */
+    color: #ffffff;
+}
+.announcement-item .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.announcement-item .bottom small {
+    font-size: 0.85em;
+    color: #ffffff;
+}
+.announcement-item .view-announcement-button {
+    border: transparent;
+    background-color: transparent;
+}
+.announcement-item .view-announcement-button i{
+    color: #fff;
+    border: transparent;
+    background-color: transparent;
+}
+.view-announcement-button i:hover {
+    color: #035607;
+}
+
+
+.progress-bar-con {
+    width: 100%;
+    height: 5px; /* Slightly increased height for better visibility */
+    display: flex;
+    align-items: center; /* Aligns the segments vertically */
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 5px;
+    background-color: #559977;
+    border-radius: 20px; /* Smooth edges for the container */
+    overflow: hidden; /* Ensures no overflow from rounded corners */
+    /* padding: 0 2px; */
+}
+
+.progress-bar-con .progress-bar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1px;
+    background-color: #559977;
+}
+
+.progress-bar-con .progress-bar div {
+    flex-grow: 1; /* Automatically adjust size based on the number of segments */
+    height: 100%;
+    background-color: #a1aca3; 
+    margin-right: 2px; /* Space between segments */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    border-radius: 4px; /* Slight rounding for each segment */
+}
+
+.progress-bar-con .progress-bar div:last-child {
+    margin-right: 0; /* Remove margin for the last segment */
+}
+
+.progress-bar div.active {
+    background-color: #255d25; /* Highlighted color for active segment */
+    ; /* Bright green for active segments */
+    transform: scaleY(1.5); /* Slightly enlarge active segments for emphasis */
+    border-radius: 25px; /* More rounding for the active segment */
+}
+
+.dashboard-box {
+    display: flex;
+    justify-content: space-between; /* Space between boxes */
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    margin-top: 20px; /* Adds space between top boxes and cards */
+    width: auto;
+}
+
+.dashboard-box-2 {
+    display: flex;
+    justify-content: center; /* Space between boxes */
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    margin-top: 20px; /* Adds space between top boxes and cards */
+    width: auto;
+}
+
+.nav-link{
+    margin-bottom: 10px;
+    text-decoration: none; /* Remove underline from links */
+    width: calc(33.33% - 20px); /* Adjust width for 3 cards per row */
+    box-sizing: border-box;
+}
+
+
+.card-row{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap; 
+    /* background-color: #01631b; */
+}
+.card-row-2{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    /* gap: 25px; */
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.card-row .card,
+.card-row-2 .card   {
+    background-color: rgba(197, 216, 147, 0.44); /* 0.44 = 44% opacity */
+    border-radius: 19px;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    /* max-width: 360px; */
+    width: 100%;
+    /* height: 220px; */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-item {
+    /* color: #D2CF96; */
+    /* margin-bottom: 10px; */
+    /* text-shadow: 3px 3px 5px rgba(6, 208, 1, 0.3); */
+    /* width: 100%; */
+    flex: 1;
+}
+.card-icon{
+    text-align: right;
+}
+
+.card h3 {
+    margin: 5px 0;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 14px;
+    margin-right: 15px;
+}
+
+.card .p-sub{
+    font-style: italic;
+}
+
+.card:hover{
+    background-color: #003E29;
+    transform: scale(1.05); /* Enlarges the card to 105% */
+    color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.card:hover .card-icon i {
+    transform: scale(1.09); /* Enlarge the icon to 109% */
+    /* color: #fff; */
+}
+
+
+/* Main Content Styling */
+main.content {
+    /* margin-left: 250px; Width of the sidebar */
+    margin-top: 36px; /* Height of the header */
+    padding: 20px;
+    background-color: rgba(0, 62, 41, 0.9);
+    min-height: calc(100vh - 56px); /* Ensure it fills remaining height */
+    transition: margin-left 0.3s ease;
+    box-sizing: border-box; /* Ensure padding does not create extra space */
+}
+
+
+/* Footer Styling */
+footer {
+    /* position: relative; */
+    bottom: 0;
+    width: 100%;
+    padding: 5px 0; /* Vertical padding */
+    background-color: rgba(0, 62, 41, 0.9); /* 0.9 = 90% opacity */
+    color: #ffffff; /* White text color */
+    text-align: right;
+    padding-right: 10px;
+    height: auto; /* Flexible height */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for separation */
+}
+
+footer p {
+    margin: 5px 0; /* Adjust margin for paragraphs */
+    display: inline-block; /* Display paragraphs inline */
+}
+
+footer a {
+    color: #ffffff; /* White text for links */
+    text-decoration: none; /* Remove underline from links */
+    margin: 0 5px; /* Margin between links */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    /* Header adjustments */
+    .custom-header {
+        padding: 5px;
+    }
+
+    /* Top Section */
+    .top-box {
+        flex-direction: column;
+    }
+
+    .announcement-box,
+    .event-box {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    /* Dashboard Box and Cards */
+    .dashboard-box {
+        flex-direction: column;
+    }
+
+    /* Force all cards to take the same width */
+    .card {
+        flex: 1 1 100%; /* Makes the card take 100% of the width */
+        width: 100%; /* Ensures the card takes up 100% width */
+        max-width: 100%; /* Prevents cards from exceeding 100% width */
+        margin-bottom: 20px;
+        height: auto; /* Allows height to adjust based on content */
+        box-sizing: border-box; /* Ensures padding is included in the width */
+    }
+
+    .card-container{
+        display: flex;              /* Use flexbox */
+        flex-direction: column;     /* Arrange items vertically */
+        align-items: center;        /* Center items horizontally */
+        width: 100%;                /* Full width */
+        gap: 5px;                  /* Optional: space between cards */
+    }
+
+    .card-row, .card-row-2 {
+        display: flex;              /* Use flexbox */
+        flex-direction: column;     /* Arrange items vertically */
+        align-items: center;        /* Center items horizontally */
+        width: 100%;                /* Full width */
+        gap: 5px;                  /* Optional: space between cards */
+    }
+
+    .online-payment {
+        display: none; /* Hides only the span with "Online Payment System" */
+    }
+
+    /* Footer adjustments */
+    footer {
+        padding: 10px 0;
+        font-size: 12px;
+        color: #fff;
+    }
+}
