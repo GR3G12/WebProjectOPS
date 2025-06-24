@@ -1,0 +1,860 @@
+*{
+    font-family: 'Piazzolla', sans-serif;
+}
+/* General Body Styling */
+body {
+    font-family: 'Piazzolla', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* overflow-x: hidden; Prevent horizontal scrolling */
+    box-sizing: border-box; /* Include padding and border in total width */
+}
+
+/* Universal Selector for Box Sizing */
+*,
+*::before,
+*::after {
+    box-sizing: inherit; /* Inherit box-sizing from body */
+}
+
+/* Header Styling */
+/* Custom Header Styles */
+.custom-header {
+    display: flex;
+    justify-content: first baseline;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff; /* Header background color */
+    color: #fff; /* Text color */
+    padding: 8px 20px; /* Padding */
+    position: fixed; /* Fixed position */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays on top */
+    box-shadow: 2px 0 5px rgba(0, 62, 41, 0.9);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: first baseline;
+    text-decoration: none;
+    color: white;
+}
+
+.logo img {
+    margin-right: 10px; /* Space between logo and text */
+    /* margin-left: 10px; */
+}
+
+.logo span {
+    font-size: 1.5em;
+    color: #003E29;
+    font-weight: bold;
+}
+
+.menu-btn{
+    display: none;
+    border: transparent;
+    background-color: transparent;
+    /* background-color: #D2CF96; */
+    font-size: 18px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+    margin-left: 20px;
+}
+
+.nav-link {
+    color: white; /* Text color */
+    text-decoration: none;
+}
+
+.badge {
+    background-color: red; /* Badge background */
+    color: white; /* Badge text color */
+    border-radius: 50%; /* Circle shape */
+    padding: 0 5px; /* Padding */
+}
+/* msaster */
+/* Container Styles */
+.container {
+    display: flex; /* Use flexbox for layout */
+    height: 100vh; /* Full height */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    color: #fff; /* Text color */
+    padding: 20px; /* Inner padding */
+    height: 100vh; /* Full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    width: 250px;
+    /* background-color: rgba(0, 62, 41, 0.9); */
+    position: fixed;
+    left: 0;
+    top: 0;
+    /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for sliding */
+    z-index: 900;
+}
+/* Hidden Sidebar Styling */
+.sidebar.hidden {
+    transform: translateX(-100%); /* Moves sidebar off-screen */
+}
+
+
+/* Main Content Styles */
+.content {
+    flex: 1; /* Take remaining space */
+    padding: 20px; /* Inner padding for content */
+    background-color: #f8f9fa; /* Main content background */
+    overflow-y: auto; /* Scroll if content overflows */
+    margin-left: 250px; /* Default when sidebar is visible */
+}
+
+.sidebar.hidden ~ .content {
+    margin-left: 0; /* Full-width content when sidebar is hidden */
+}
+
+/* Sidebar Styling */
+aside.sidebar {
+    position: fixed;
+    top: 45px; /* Height of the header */
+    left: 0;
+    width: 260px; /* Default width of the sidebar */
+    height: calc(100vh - 40px); /* Full viewport height minus header height */
+    z-index: 900;
+    background-color: rgba(0, 62, 41, 0.9);
+    padding: 20px;
+    /* overflow-y: auto; */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    /* margin-top: 10px; */
+    justify-content: space-between;
+}
+
+/* Sidebar Header Styling */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px;
+    width: 100%;
+    /* background-color: #ffffff; */
+    border-radius: 5px;
+    height: 140px;
+    /* margin-top: 10px; */
+    overflow: hidden;
+}
+
+.sidebar-header h4 {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    color: #D2CF96; /* Makes the text white to contrast with the background */
+    /* margin-left: 10px; */
+    /* background-color: #003E29; */
+}
+
+.sidebar-header img {
+    border-radius: 50%; 
+    overflow: hidden;
+    width: 100px;
+}
+
+
+/* Sidebar Navigation Styling */
+/* Adjust nav styling */
+.sidebar .nav {
+    padding: 0; /* Remove padding */
+    list-style: none; /* No bullets */
+}
+.sidebar li{
+    margin: 0;
+    display: flex;   
+}
+
+/* Nav item styling */
+.sidebar .nav-item {
+    margin-bottom: 2px; /* Space between items */
+    font-size: 18px; /* Font size */
+}
+
+/* Nav link styling */
+.sidebar .nav-link {
+    color: white;
+    /* transition: background-color 0.3s, color 0.3s; */
+    width: calc(100% - 20px); /* Fill width with margin accounted */
+    display: flex; /* Use flex to align items */
+    padding: 10px 20px; /* Match padding with header */
+    box-sizing: border-box; /* Include padding in width */
+    width: 100%;
+    justify-content: flex-start;
+    transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease; 
+}
+
+.sidebar .nav-item i{
+    font-size: 22px;
+    /* color: #D2CF96; */
+}
+/* Adjust icon size in the navigation item */
+.icon-size {
+    font-size: 1.9em; /* Adjust the size as needed */
+    /* You can also use the transform scale method if needed */
+    /* transform: scale(1.5); */
+    color: #fff; /* Optional: set the icon color */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+/* .sidebar .person{
+    font-size: 30px;
+} */
+.sidebar h4{
+    color: #D2CF96;
+}
+
+/* Span styling */
+.sidebar .nav-link span {
+    margin-left: 10px;
+}
+/* Style for active link */
+.sidebar .nav-link.active {
+    /* background-color: #fff; */
+    background-color: rgba(170, 181, 144, 0.44); /* 0.44 = 44% opacity */
+    color: #fff;
+    /* color: #D2CF96; */
+    font-weight: bold;
+    width: 100%;
+    border-radius: 50px;
+    border: 1px solid #fff; /* Add solid border */
+    height: auto;
+    transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+}
+/* Hover effect for all links */
+.sidebar .nav-link:hover {
+    background-color: rgba(197, 216, 147, 0.44); /* 0.44 = 44% opacity */
+    /* color: #D2CF96; */
+    color: #fff;
+    width: 100%;
+    border-radius: 50px;
+    border: 1px solid #fff; /* Add solid border */
+    margin: 0;
+    transition: background-color 0.3s ease;/* transform 0.3s ease,  */
+}
+
+.sidebar-footer{
+    background-color: #003E29;
+    border-radius: 5px;
+    position: relative;
+    
+}
+.sidebar-footer:hover{
+    background-color: #006f4a;
+    border-radius: 5px;
+    position: relative;
+    transform: scale(1.05);
+}
+
+.sidebar .nav-link-logout{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    align-items: center;
+    text-decoration: none;  
+    
+}
+.sidebar-footer i{
+    color: #fff;
+}
+.sidebar-footer span{
+    color: #fff;
+}
+
+/* Dashboard Styling */
+.dashboard-content {
+    padding: 20px;
+    margin-top: auto;
+    font-family: Arial, sans-serif;
+}
+
+.top-box {
+    display: flex;
+    justify-content: space-between; /* Space between boxes */
+    margin-bottom: 20px; /* Space below the top boxes */
+    gap: 20px; /* Space between the boxes */
+}
+
+.dashboard-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    margin-top: 20px; /* Adds space between top boxes and cards */
+}
+
+
+/* Main Content Styling */
+main.content {
+    margin-left: 260px; /* Width of the sidebar */
+    margin-top: 26px; /* Height of the header */
+    padding: 15px;
+    background-image: url("../imgs/school.png");
+    background-size: cover;
+    background-position: center; 
+    min-height: calc(100vh - 56px); /* Ensure it fills remaining height */
+    transition: margin-left 0.3s ease;
+    box-sizing: border-box; /* Ensure padding does not create extra space */
+}
+/* Overlay effect */
+main.content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* White overlay with 60% opacity */
+    z-index: 0; /* Place it behind content */
+}
+
+/* Ensure content is on top of overlay */
+main.content > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive Design: Adjusting for smaller screens */
+@media (max-width: 992px) {
+    aside.sidebar {
+        width: 200px; /* Adjust width for medium screens */
+    }
+
+    main.content {
+        margin-left: 200px; /* Adjust margin for medium screens */
+    }
+}
+
+
+@media (max-width: 576px) {
+    aside.sidebar {
+        padding: 10px; /* Adjust padding for very small screens */
+    }
+
+    .sidebar .nav-link {
+        font-size: 0.875rem; /* Smaller font size */
+    }
+}
+
+/* Footer Styling */
+footer {
+    /* position: relative; */
+    bottom: 0;
+    width: 100%;
+    padding: 5px 0; /* Vertical padding */
+    background-color: #ffffff;
+    color: #000000; /* White text color */
+    text-align: right;
+    padding-right: 10px;
+    height: auto; /* Flexible height */
+    /* box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); Optional shadow for separation */
+}
+
+footer p {
+    margin: 5px 0; /* Adjust margin for paragraphs */
+    display: inline-block; /* Display paragraphs inline */
+}
+
+footer a {
+    color: #000000; /* White text for links */
+    text-decoration: none; /* Remove underline from links */
+    margin: 0 5px; /* Margin between links */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+/* Modal Background */
+.confirmation-logout-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    /* left: 0;
+    right: 0; 
+    top: 0; */
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    overflow: auto; /* Allow scrolling if content overflows */
+}
+
+/* Modal Content */
+.confirmation-logout-modal-content {
+    background-color: rgba(255, 255, 255, 0.91);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 90%; /* Adjust width for mobile */
+    max-width: 420px; /* Maximum width */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 20px; /* Add margin to avoid touching edges */
+}
+
+.confirmation-logout-modal-content .par {
+    background-color: #fff;
+    padding: 20px 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 2px 10px 15px -3px rgba(0, 0, 0, 0.1), 2px 4px 6px -2px rgba(0, 0, 0, 0.1);
+    color: #000;
+}
+
+/* Buttons */
+.confirmation-logout-modal-content .modal-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* gap: 30px; */
+    flex-wrap: wrap; /* Allow buttons to wrap to next line */
+}
+
+.confirmation-logout-modal-content .btn-confirm,
+.confirmation-logout-modal-content .btn-cancel {
+    font-size: 18px;
+    height: 35px;
+    width: 120px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0;
+    margin-bottom: 10px; /* Add some space below buttons */
+}
+
+.confirmation-logout-modal-content .btn-confirm {
+    background-color: #ba1300;
+}
+
+.confirmation-logout-modal-content .btn-cancel {
+    background-color: #0165bc;
+}
+
+.confirmation-logout-modal-content .btn-confirm:hover,
+.confirmation-logout-modal-content .btn-cancel:hover {
+    height: 32px;
+    width: 100px;
+    font-size: 15px;
+}
+
+/* Responsive Design for Mobile Screens */
+/* Sidebar Navigation Styling for Mobile - Show Only Icons */
+
+@media (max-width: 768px) {
+    /* Header adjustments */
+    .custom-header {
+        width: 100%;
+        position: fixed;
+        z-index: 2; /* Ensure header is always on top of the sidebar */
+        padding: 5px;
+        font-size: 12px;
+    }
+    .online-payment {
+        display: none; /* Hides only the span with "Online Payment System" */
+    }
+
+    .sidebar{
+        /* transform: translateX(0); */
+        /* background-color: #D2CF96; */
+        /* left: -110%;  */
+        /* width: 200px; */
+        display: none;
+    }
+
+    .menu-btn{
+        display: flex;
+        border: transparent;
+        background-color: transparent;
+        /* background-color: #D2CF96; */
+        font-size: 18px;
+    }
+
+    /* Sidebar */
+    aside.sidebar {
+        width: 220px; 
+        height: 93vh; /* Full viewport height */
+        position: fixed;
+        top: 45px; 
+        left: 0;
+        padding: 10px 0; /* Remove inner padding */
+        /* padding-left: 5px; */
+        z-index: 900;
+        /* background-color: rgba(0, 62, 41, 0.9); */
+        transition: width 0.3s ease; /* Smooth transition for expanding/collapsing */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Sidebar Navigation Links */
+    .sidebar .nav-link {
+        align-items: center; /* Center the icons */
+        padding: 10px 3px; /* Reduced padding for a compact look */
+        font-size: 10px; /* Slightly smaller font */
+        display: flex;
+    }
+
+    /* Hide text on nav links */
+    .sidebar .nav-link span {
+        font-size: 15px;
+    }
+    /* Adjust icon size */
+    .sidebar .nav-link i {
+        font-size: 10px; /* Increase icon size for visibility */
+    }
+
+    /* Main Content */
+    main.content {
+        margin-left: 0;
+        margin-top: 10px; /* Maintain space for the header */
+        padding: 15px;
+        transition: margin-left 0.3s ease;
+    }
+
+    /* Sidebar Header */
+    .sidebar-header{
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .sidebar-header img {
+        width: 70px;
+    }
+
+    /* Style for active link */
+    .sidebar .nav-link.active {
+        background-color: rgba(170, 181, 144, 0.44);
+        font-weight: bold; /* Optional: make text bold */
+        width: 100%;
+        border-radius: 25px;
+        transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+    }
+    /* Hover effect for all links */
+    .sidebar .nav-link:hover {
+        background-color: rgba(170, 181, 144, 0.44);
+        width: 100%;
+        border-radius: 25px;
+        transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+    }
+
+    .sidebar-footer{
+        width: 150px;
+    }
+
+    footer p {
+        margin: 5px 0;
+        display: inline-block; /* Display paragraphs inline */
+        font-size: 10px;
+    }
+    
+    footer a {
+        color: #000000; /* White text for links */
+        text-decoration: none; /* Remove underline from links */
+    }
+
+    .sidebar.hidden {
+        /* transform: translateX(220%);  */
+        left: 240px;
+        display: flex;
+        background-color: transparent;
+        border: transparent;
+    }
+
+    .sidebar.hidden ~ .content {
+        margin-left: 0;
+    }
+
+    .confirmation-logout-modal{
+        width: 100%; 
+        left: 0;
+        right: 0;
+    }
+}
+
+
+@media (max-width: 480px) {
+    /* Header adjustments */
+    .custom-header {
+        width: 100%;
+        position: fixed;
+        z-index: 2; /* Ensure header is always on top of the sidebar */
+        padding: 5px;
+        font-size: 12px;
+    }
+    .online-payment {
+        display: none; /* Hides only the span with "Online Payment System" */
+    }
+
+    .sidebar{
+        transform: translateX(0);
+        /* background-color: #D2CF96; */
+        /* left: -110%;  */
+        /* width: 200px; */
+        display: none;
+    }
+
+    /* Sidebar */
+    aside.sidebar {
+        width: 220px; 
+        height: 93vh; /* Full viewport height */
+        position: fixed;
+        top: 45px; 
+        left: 0;
+        padding: 10px 0; /* Remove inner padding */
+        /* padding-left: 5px; */
+        z-index: 900;
+        /* background-color: rgba(0, 62, 41, 0.9); */
+        transition: width 0.3s ease; /* Smooth transition for expanding/collapsing */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Sidebar Navigation Links */
+    .sidebar .nav-link {
+        align-items: center; /* Center the icons */
+        padding: 10px 3px; /* Reduced padding for a compact look */
+        font-size: 10px; /* Slightly smaller font */
+        display: flex;
+    }
+
+    /* Hide text on nav links */
+    .sidebar .nav-link span {
+        font-size: 15px;
+    }
+    /* Adjust icon size */
+    .sidebar .nav-link i {
+        font-size: 10px; /* Increase icon size for visibility */
+    }
+
+    /* Main Content */
+    main.content {
+        margin-left: 0;
+        margin-top: 10px; /* Maintain space for the header */
+        padding: 15px;
+        transition: margin-left 0.3s ease;
+    }
+
+    /* Sidebar Header */
+    .sidebar-header{
+        width: 100%;
+        height: 130px;
+        margin: 0;
+        /* background-color: #fff; */
+    }
+
+    .sidebar-header img {
+        width: 70px;
+    }
+    .sidebar-header h4 {
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Style for active link */
+    .sidebar .nav-link.active {
+        background-color: rgba(170, 181, 144, 0.44);
+        font-weight: bold; /* Optional: make text bold */
+        width: 100%;
+        border-radius: 25px;
+        transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+    }
+    /* Hover effect for all links */
+    .sidebar .nav-link:hover {
+        background-color: rgba(170, 181, 144, 0.44);
+        width: 100%;
+        border-radius: 25px;
+        transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+    }
+
+    .sidebar-footer{
+        width: 150px;
+    }
+
+    footer p {
+        margin: 5px 0;
+        display: inline-block; /* Display paragraphs inline */
+        font-size: 10px;
+    }
+    
+    footer a {
+        color: #000000; /* White text for links */
+        text-decoration: none; /* Remove underline from links */
+    }
+
+    .sidebar.hidden {
+        /* transform: translateX(220%);  */
+        left: 240px;
+        display: flex;
+        background-color: transparent;
+        border: transparent;
+    }
+
+    .sidebar.hidden ~ .content {
+        margin-left: 0;
+    }
+}
+
+
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 400px) {
+    /* Header adjustments */
+    .custom-header {
+        width: 100%;
+        position: fixed;
+        /* z-index: 2; */
+        z-index: 1000;
+        padding: 5px;
+        font-size: 12px;
+        /* display: flex;
+        justify-content: space-between;
+        align-items: center; */
+    }
+
+    .online-payment {
+        display: none;
+    }
+
+    /* Sidebar */
+    aside.sidebar {
+        width: 200px; 
+        height: 93vh;
+        position: fixed;
+        top: 45px;
+        left: 0;
+        padding: 5px 0; /* Reduced padding */
+        z-index: 900;
+        transition: width 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Sidebar Navigation Links */
+    .sidebar .nav-link {
+        padding: 8px 5px; /* Smaller padding */
+        font-size: 10px; /* Smaller font size */
+        display: flex;
+    }
+
+    .sidebar .nav-link i {
+        font-size: 12px; /* Slightly larger icons for better visibility */
+    }
+
+    /* Main Content */
+    main.content {
+        margin-left: 0;
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    /* Sidebar Header */
+    .sidebar-header img {
+        width: 80px;
+    }
+
+    /* Style for active link */
+    .sidebar .nav-link.active {
+        background-color: rgba(170, 181, 144, 0.44);
+        font-weight: bold;
+        width: 100%;
+        border-radius: 25px;
+    }
+
+    .sidebar .nav-link:hover {
+        background-color: rgba(170, 181, 144, 0.44);
+        width: 100%;
+        border-radius: 25px;
+    }
+
+    /* Adjust Footer on Small Screens */
+    footer p {
+        font-size: 10px;
+    }
+    footer .p2 {
+        display: none;
+    }
+
+    .sidebar-footer {
+        width: 150px;
+    }
+
+    .sidebar.hidden {
+        /* transform: translateX(100%); */
+        background-color: #D2CF96;
+        left: 245px;
+        display: flex;
+        background-color: transparent;
+        border: transparent;
+    }
+
+    .sidebar.hidden ~ .content {
+        margin-left: 0;
+    }
+
+    .confirmation-logout-modal-content .par {
+        background-color: #fff;
+        padding: 15px 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 19px;
+        font-weight: bold;
+        border-radius: 10px;
+        box-shadow: 2px 10px 15px -3px rgba(0, 0, 0, 0.1), 2px 4px 6px -2px rgba(0, 0, 0, 0.1);
+        color: #000;
+    }
+    /* Buttons */
+    .confirmation-logout-modal-content .modal-buttons {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        /* gap: 30px; */
+        flex-wrap: wrap; /* Allow buttons to wrap to next line */
+    }
+    .confirmation-logout-modal-content .btn-confirm,
+    .confirmation-logout-modal-content .btn-cancel {
+        font-size: 18px;
+        height: 35px;
+        width: 90px;
+        border: none;
+        color: #fff;
+        border-radius: 5px;
+        padding: 0;
+        margin-bottom: 10px; /* Add some space below buttons */
+    }
+    .confirmation-logout-modal-content .btn-confirm:hover,
+    .confirmation-logout-modal-content .btn-cancel:hover {
+        height: 32px;
+        width: 85px;
+        font-size: 16px;
+    }
+}
