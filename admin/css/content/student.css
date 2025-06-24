@@ -1,0 +1,1013 @@
+.reports-container{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+.reports-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reports-header h2{
+    font-style: italic;
+}
+
+.button-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 25px;
+    height: 40px;
+    /* width: 140px; */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.button:hover{
+    background-color: #02934367;
+}
+
+/* search field */
+.search-field{
+    margin-top: 10px;
+}
+.search-field form{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+}
+
+.search-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.search {
+    padding: 8px;
+    padding-right: 30px; /* Make space for the clear button */
+    /* min-width: 400px; */
+    width: 100%;
+    border: 1px solid #2f4f4f;
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.1),
+                inset -5px -5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-button{
+    /* margin-left: -20px; */
+    width: 120px;
+    padding: 8px;
+    color:#ffffff;
+    font-weight: bold;
+    border: transparent;
+    border-radius: 10px;
+    background-color: #2f4f4f;
+}
+.search-button:hover{
+    background-color: #7c7e7e;
+}
+
+
+.clear-btn {
+    position: absolute;
+    top: 43%;
+    right: 5px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #888;
+}
+
+.clear-btn:hover {
+    color: #000;
+}
+
+
+.student-details{
+    display: none;
+    background-color: #025e1f54;
+    border-radius: 10px;
+    padding: 10px;
+}
+.student-details .close-button{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #000;
+}
+.student-details .action-button{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 30px;
+    /* background-color: #0056b3; */
+}
+.student-details .action-button #deleteAccountButton{
+    align-items: center;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 2px 10px;
+    font-size: 14px;
+}
+.student-details .action-button #deleteAccountButton:hover{
+    padding: 1px 8px;
+    font-size: 14px;
+}
+
+.close-button Label{
+    font-size: 20px;
+    font-weight: bold;
+}
+.close-button button{
+    background-color: #dc3f018c;
+    color: #fff;
+    border-radius: 10px;
+    padding: 5px 20px;
+}
+.close-button button:hover{
+    background-color: #681e01f1;
+    color: #fff;
+    border-radius: 10px;
+}
+
+
+/* .filter-container{
+    padding-bottom: 10px;
+} */
+.filtercon{
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    /* background-color: #4CAF50; */
+}
+.image-label{
+    padding: 10px;
+    background-color: transparent;
+}
+.rightside{
+    /* background-color: yellow; */
+    width: 100%;
+}
+.filter1, .filter2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    width: 100%;
+    gap: 10px;
+}
+.filter1 .name-label{
+    width: 100%;
+}
+.filter1 label{
+    font-weight: bold;
+}
+.filter2 label{
+    font-weight: bold;
+}
+.filter1 input[type='text'], .filter1 input[type='number']{
+    height: 30px;
+    width: 100%;
+    text-transform: capitalize; 
+}
+
+.filter2 .course-label,
+.filter2 .year-label,
+.filter2 .section-label,
+.filter2 .semester-label{
+    width: 100%;
+}
+.filter2 input[type='text']{
+    height: 30px;
+    width: 100%;
+    text-transform: capitalize; 
+}
+.filter2 .year-level, .course, .section, .sem{
+    height: 30px;
+    width: 150px;
+}
+
+.balance-details{
+    padding-bottom: 20px;
+}
+
+.balance-details label{
+    font-weight: bold;
+}
+.payment-history label{
+    font-weight: bold;
+}
+
+
+/* table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-collapse: separate; /* Separate borders to apply radius */
+    border-spacing: 0; /* Remove spacing between cells */
+    border-radius: 10px; /* Adjust radius as needed */
+    /* overflow: hidden; */
+    width: 100%;
+    /* border: 2px solid #ddd;  */
+}
+.table thead{
+    padding-bottom: 10px;
+}
+.table th, .table td {
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
+    text-align: left;
+    /* border-radius: 50px; */
+}
+
+/* Remove border-radius from the first th element on the left of the table */
+.table th:first-child{
+    border-top-left-radius: 5px;
+    border-left: 1px solid #ccc;
+}
+/* Remove border-radius from the last th elements on the right of the table */
+.table th:last-child{
+    border-top-right-radius: 5px;
+    border-right: 1px solid #ccc;
+}
+/* Remove border-radius from the first th element on the left of the table */
+.table td:first-child{
+    border-left: 1px solid #ccc;
+}
+/* Remove border-radius from the last th elements on the right of the table */
+.table td:last-child{
+    border-right: 1px solid #ccc;
+}
+.table th {
+    background-color: #2f4f4f;
+    color: #fff;
+    align-items: center;
+    text-align: left;
+    /* margin-bottom: 10px; */
+}
+
+.table tr{
+    border-radius: 20px;
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+.table tbody tr:hover{
+    background-color: #9cb89d;
+    transform: scale(1.01); /* Enlarges the card to 105% */
+}
+
+.balance-table-th tr th{
+    width: 50%;
+}
+
+/* table - balance */
+.table-balance {
+    width: 100%;
+    border-collapse: collapse;
+    border-collapse: separate; /* Separate borders to apply radius */
+    border-spacing: 0; /* Remove spacing between cells */
+    border-radius: 10px; /* Adjust radius as needed */
+    overflow: hidden; /* Ensure rounded corners clip content */
+    width: 100%;
+    border: 1px solid #010000; /* Optional: Add border */
+}
+.table-balance thead{
+    padding-bottom: 10px;
+}
+.table-balance th, .table-balance td {
+    padding: 5px 0;
+    padding-left: 10px;
+    border-bottom: 1px solid #0a4d00;
+    text-align: left;
+    width: 50%;
+}
+
+.table-balance th {
+    background-color: #2f4f4f;
+    color: #fff;
+    align-items: center;
+    text-align: left;
+    /* margin-bottom: 10px; */
+}
+.table-balance tr{
+    border-radius: 20px;
+    padding: 2px;
+}
+
+.balance-table-th tr th{
+    width: 50%;
+}
+
+/* table - balance */
+.table-remaining {
+    width: 100%;
+    border-collapse: collapse;
+    border-collapse: separate; /* Separate borders to apply radius */
+    border-spacing: 0; /* Remove spacing between cells */
+    border-radius: 10px; /* Adjust radius as needed */
+    overflow: hidden; /* Ensure rounded corners clip content */
+    width: 100%;
+    border: 1px solid #000000; /* Optional: Add border */
+}
+.table-remaining thead{
+    padding-bottom: 10px;
+}
+.table-remaining th, .table-remaining td {
+    padding: 5px 0;
+    padding-left: 10px;
+    border-bottom: 1px solid #0a4d00;
+    text-align: left;
+    /* width: 50%; */
+}
+.table-remaining th:first-child{
+    padding: 5px 0;
+    padding-left: 10px;
+    border-bottom: 1px solid #0a4d00;
+    text-align: left;
+    width: 50%;
+}
+.table-remaining th:nth-child(2){
+    padding: 5px 0;
+    padding-left: 10px;
+    border-bottom: 1px solid #0a4d00;
+    text-align: left;
+    width: 20%;
+}
+.table-remaining th {
+    background-color: #2f4f4f;
+    color: #fff;
+    align-items: center;
+    text-align: left;
+    /* margin-bottom: 10px; */
+}
+.table-remaining tr{
+    border-radius: 20px;
+    padding: 2px;
+}
+.balance-table-th tr th{
+    width: 50%;
+}
+
+
+
+
+.pagination {
+    /* margin-top: 20px; */
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination ul {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    gap: 5px;
+}
+
+.pagination ul li {
+    display: inline;
+}
+.pagination ul li a:hover {
+    background-color: rgb(54, 130, 56, 0.5);
+}
+
+.pagination ul li a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    color: #333;
+    border-radius: 5px;
+}
+
+.pagination ul li a.active {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+}
+
+/* Modal styles */
+.add-student-modal, .update-student-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: auto;
+    z-index: 1000;
+}
+
+.add-student-modal-content, .update-student-modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #888;
+    width: 800px;
+}
+
+.add-student-modal-content .modal-header, .update-student-modal-content .modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.modal-header-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.add-student-modal-content h2, .update-student-modal-content h2{
+    padding: 0;
+    margin: 0;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: -15px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.row-image{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 10px;
+    margin-top: 10px;
+    /* background-color: grey; */
+}
+
+.row1, .row2, .row3, .row4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.row1 input[type='number'], .row1 select {
+    width:  245px;
+    padding: 5px;
+    font-size: 16px;
+    text-transform: capitalize; 
+}
+.row1 input[type='password']{
+    width: 500px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.row2 input[type='text'] {
+    width: 244px;
+    padding: 5px;
+    font-size: 16px;
+    text-transform: capitalize; 
+}
+
+.row3 .row33 select{
+    width:  180px;
+    padding: 5px;
+    font-size: 16px;
+} 
+
+.row4 input[type='number'] {
+    width: 245px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.row1 .row33 select{
+    width: 165px;
+}
+.row1 .row33 input[type='email']{
+    width: 400px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.sub-button {
+    background-color: rgba(0, 135, 47, 0.9);
+    border-radius: 10px;
+    padding: 5px 20px;
+    color: #fff;
+    display: flex;
+    justify-content: center; /* Centers the text inside the button */
+    align-items: center;
+    margin-left: auto; /* Aligns button to the right */
+    font-size: 17px;
+}
+.sub-button:hover{
+    background-color: rgba(1, 69, 25, 0.9);
+    color: #fff;
+}
+
+
+/* Styles for modal, form, and button */
+.import-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.import-form input[type="file"] {
+    margin-bottom: 25px;
+    /* background-color: grey; */
+    width: 100%;
+    /* border: 1px solid #000; */
+}
+
+.import-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.import-button:hover {
+    background-color: #0056b3;
+}
+
+.export-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.export-btn:hover {
+    background-color: #45a049;
+}
+
+
+
+/* upload From Uiverse.io by vinodjangid07 */ 
+.add-Btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    /* border: 1px solid #0a4d00; */
+    background-color: #fff;
+  }
+  
+  /* plus sign */
+.add-Btn .sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.add-Btn .sign img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
+  }
+  
+  /* text */
+.add-Btn .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: rgb(0, 90, 21);
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+    width: 200px;
+  }
+  /* hover effect on button width */
+.add-Btn:hover {
+    width: 160px;
+    border-radius: 40px;
+    transition-duration: .3s;
+  }
+  
+.add-Btn:hover .sign {
+    width: 20%;
+    transition-duration: .3s;
+    padding-left: 20px;
+  }
+  /* hover effect button's text */
+.add-Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+    justify-content: center;
+  }
+/* button click effect*/
+.add-Btn:active {
+    transform: translate(2px ,2px);
+  }
+
+/* upload From Uiverse.io by vinodjangid07 */ 
+.update-Btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    /* border: 1px solid #0a4d00; */
+    background-color: #fff;
+  }
+  
+  /* plus sign */
+.update-Btn .sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.update-Btn .sign img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
+  }
+  
+  /* text */
+.update-Btn .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: rgb(0, 90, 21);
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+    width: 200px;
+  }
+  /* hover effect on button width */
+.update-Btn:hover {
+    width: 180px;
+    border-radius: 40px;
+    transition-duration: .3s;
+  }
+  
+.update-Btn:hover .sign {
+    width: 20%;
+    transition-duration: .3s;
+    padding-left: 20px;
+  }
+  /* hover effect button's text */
+.update-Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+    justify-content: center;
+  }
+/* button click effect*/
+.update-Btn:active {
+    transform: translate(2px ,2px);
+  }
+
+/* upload From Uiverse.io by vinodjangid07 */ 
+.setting-Btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    /* border: 1px solid #0a4d00; */
+    background-color: #fff;
+  }
+  
+  /* plus sign */
+.setting-Btn .sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.setting-Btn .sign img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
+  }
+  
+  /* text */
+.setting-Btn .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: rgb(0, 90, 21);
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+    width: 200px;
+  }
+  /* hover effect on button width */
+.setting-Btn:hover {
+    width: 130px;
+    border-radius: 40px;
+    transition-duration: .3s;
+  }
+  
+.setting-Btn:hover .sign {
+    width: 20%;
+    transition-duration: .3s;
+    padding-left: 20px;
+  }
+  /* hover effect button's text */
+.setting-Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+    justify-content: center;
+  }
+/* button click effect*/
+.setting-Btn:active {
+    transform: translate(2px ,2px);
+  }
+
+
+/* download From Uiverse.io by vinodjangid07 */ 
+.Btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: rgb(0, 118, 26);
+  }
+  
+  /* plus sign */
+  .sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sign img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
+  }
+  
+  /* text */
+  .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+    width: 200px;
+  }
+  /* hover effect on button width */
+  .Btn:hover {
+    width: 235px;
+    border-radius: 40px;
+    transition-duration: .3s;
+  }
+  
+  .Btn:hover .sign {
+    width: 20%;
+    transition-duration: .3s;
+    padding-left: 20px;
+  }
+  /* hover effect button's text */
+  .Btn:hover .text {
+    opacity: 1;
+    width: 80%;
+    transition-duration: .3s;
+    padding-right: 10px;
+    justify-content: center;
+  }
+  /* button click effect*/
+  .Btn:active {
+    transform: translate(2px ,2px);
+  }
+
+
+/* upload From Uiverse.io by vinodjangid07 */ 
+.upload-Btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: rgb(0, 118, 26);
+  }
+  
+  /* plus sign */
+.upload-Btn .sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.upload-Btn .sign img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
+  }
+  
+  /* text */
+.upload-Btn .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+    width: 150px;
+  }
+  /* hover effect on button width */
+.upload-Btn:hover {
+    width: 160px;
+    border-radius: 40px;
+    transition-duration: .3s;
+  }
+  
+.upload-Btn:hover .sign {
+    width: 20%;
+    transition-duration: .3s;
+    padding-left: 20px;
+  }
+  /* hover effect button's text */
+.upload-Btn:hover .text {
+    opacity: 1;
+    width: 80%;
+    transition-duration: .3s;
+    padding-right: 10px;
+    justify-content: center;
+  }
+/* button click effect*/
+.upload-Btn:active {
+    transform: translate(2px ,2px);
+  }
+
+
+
+
+/* delete confirmation modal */
+.delete-modal{
+    display:none; 
+    position:fixed; 
+    top:0; 
+    left:0; 
+    width:100%; 
+    height:100%; 
+    background:rgba(0,0,0,0.5); 
+    z-index:9999;
+}
+.delete-modal-content{
+    background:rgb(239, 239, 239);
+    padding:20px; 
+    margin:15% auto; 
+    width:100%; 
+    max-width:460px; 
+    border-radius:8px; 
+    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+}
+.delete-modal-content .par{
+    background-color: #fff;
+    padding: 20px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    font-weight: bold;
+    /* border: 1px solid #000; */
+    border-radius: 10px;
+    box-shadow: 2px 10px 15px -3px rgba(0, 0, 0, 0.1), 2px 4px 6px -2px rgba(0, 0, 0, 0.1);
+}
+.delete-modal-content form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 50px;
+    padding: 20px;
+    margin-top: 20px;
+}
+.delete-modal-content form .no-button{
+    height: 33px;
+    width: 120px;
+    background-color: #0165bc;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 17px;
+}
+.delete-modal-content form .no-button:hover{
+    height: 30px;
+    width: 100px;
+    font-size: 15px;
+}
+.delete-modal-content form .yes-button{
+    height: 33px;
+    width: 120px;
+    background-color: #ba1300;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 17px;
+}
+.delete-modal-content form .yes-button:hover{
+    height: 30px;
+    width: 100px;
+    font-size: 15px;
+}

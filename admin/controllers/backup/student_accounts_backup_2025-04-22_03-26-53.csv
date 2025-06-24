@@ -1,0 +1,13 @@
+id,student_number,student_type,tuition_type,firstname,middlename,lastname,email,course,year_level,section,semester,total_tuition_fee,tuition_fee_discount,balance_to_be_paid,down_payment,total_balance,remaining_balance_to_pay,profile_image
+1,33333,regular,scholar,Jaron,,"De Leon",,BSIT,4,A,2,14000,4000,10000,3000,7000,750,
+2,12345,regular,scholar,Glen,,Borlagdan,,BSIT,4,A,2,10000,1000,9000,3000,6000,4500,
+3,11111,irregular,free,"King Gerald",C,Bande,,BSCE,4,,0,14000,0,14000,3000,11000,0,
+6,44444,irregular,scholar,Jeff,,Cabanos,,BSCS,4,,0,21000,12000,9000,3000,6000,300,
+7,55555,regular,scholar,Tuesday,,Crisostomo,,BSCE,3,,0,15000,8000,7000,3000,7000,4000,
+8,10267,regular,free,"Alexandra Mae",,Babista,,BSIT,4,,0,10000,3000,7000,3000,7000,2000,
+29,11348,Regular,scholar,"John raven",Legardo,Arevalo,,BSIT,1,A,1,12000,3000,9000,3000,6000,4500,../../uploads/1740046127_gg--profile.png
+30,11349,Regular,free_tuition,Renalyn,Legardo,Arevalo,,BSCE,2,A,1,0,0,0,0,0,0,../../uploads/1740046210_girl2Profile.png
+31,11350,Regular,scholar,Billy,J,Regalo,,BSIT,4,A,2,9000,3000,6000,3000,3000,0,../../uploads/1740046517_boyProfile.png
+41,16734,regular,scholar,Alexis,"Non ",Antiado,,BSIT,4,A,2,10000,0,10000,5000,5000,5000,
+53,101201,regular,"ASAP Scholar",Anon,M,Ail,,BSIT,1,A,1,9000,2000,7000,3000,4000,4000,
+54,100011,Regular,scholar,Vhong,g,Ga,vhong@gmail.com,BSCE,4,A,2,39000,9000,30000,10000,20000,20000,../../uploads/1743596490_ACTS_OPS_v4.png

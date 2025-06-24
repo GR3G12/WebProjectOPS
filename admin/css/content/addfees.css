@@ -1,0 +1,1077 @@
+.add-fees-con {
+    margin: 20px 20px 0;
+}
+
+.add-fees-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* upload From Uiverse.io by vinodjangid07 */ 
+.add-fees-header .add-Btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    /* border: 1px solid #0a4d00; */
+    background-color: #fff;
+  }
+  
+  /* plus sign */
+.add-fees-header .add-Btn .sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.add-fees-header .add-Btn .sign img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
+  }
+  
+  /* text */
+.add-fees-header .add-Btn .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: rgb(0, 90, 21);
+    font-size: 1.1em;
+    font-weight: 600;
+    transition-duration: .3s;
+    width: 200px;
+  }
+  /* hover effect on button width */
+.add-fees-header .add-Btn:hover {
+    width: 150px;
+    border-radius: 40px;
+    transition-duration: .3s;
+  }
+  
+.add-fees-header .add-Btn:hover .sign {
+    width: 10%;
+    transition-duration: .3s;
+    padding: 10px;
+  }
+  /* hover effect button's text */
+.add-fees-header .add-Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+    justify-content: center;
+  }
+/* button click effect*/
+.add-fees-header .add-Btn:active {
+    transform: translate(2px ,2px);
+  }
+
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch; /* Ensures child elements span the container */
+    gap: 15px;
+    width: 100%; /* Makes it span the entire parent width */
+    max-width: 1200px; /* Optional: Limits the maximum width */
+    margin: 0 auto; /* Centers the container inside the parent */
+}
+
+.new-fees .details label {
+    color: rgb(0, 34, 0);
+    font-weight: bold;
+    padding: 0;
+    margin-bottom: 2px;
+}
+
+/* Ensure that both textarea and dropdown have the same height */
+.new-fees .details select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    border: 1px solid #000;
+    box-sizing: border-box; /* Ensures padding and border are included in width/height */
+    height: 35px; /* Set height to match the dropdown */
+    resize: vertical; /* Allow vertical resizing for textarea if necessary */
+}
+
+
+/* Ensure the overall layout is correct */
+.new-fees .student, 
+.new-fees .details {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.new-fees .details .level {
+    flex: 1; /* Let elements stretch */
+}
+
+
+.fee-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: flex-end;
+    border-radius: 10px;
+}
+
+label[for="fees-d"] {
+    font-size: 20px;  /* Standard font size */
+    font-style: italic;
+    font-weight: bold;
+    color: #001b05;  /* Dark color for contrast */
+    /* margin-top: 10px; */
+    margin-bottom: 5px;  /* Space below the label */
+    display: block;  /* Ensures label is on its own line */
+}
+.fee-details label{
+    color: rgb(0, 34, 0);
+    font-weight: bold;
+    padding: 0;
+    margin-bottom: 2px;
+}
+
+/* Ensure .fee-details2 spans full width */
+.fee-details2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    gap: 10px; /* Ensures the gap between child elements is 10px */
+    width: 100%; /* Ensure the container spans the full width */
+}
+.fee-details2 .level {
+    flex: 1; /* Ensures the elements stretch evenly */
+    display: flex;
+    flex-direction: column; /* Ensures label and input are stacked vertically */
+}
+
+input, select{
+    width: 100%; /* Make input span the full available width */
+    height: 35px;
+    min-width: 100px; /* Prevent input from shrinking too much */
+    border-radius: 5px;
+    font-size: 14px;
+    border: 1px solid #000;
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+label {
+    font-size: 15px;
+    color: #000000;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.fee-details2 input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    /* background-color: #317746; */
+    color: #000;
+    border: px solid #2f4f4f;
+    padding: 5px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    /* transition: background-color 0.3s; */
+    width: 160px;
+}
+
+button:hover {
+    background-color: #043d11;
+}
+
+.table {
+    grid-column: 1 / -1;
+    overflow-x: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+    /* overflow: hidden; */
+}
+
+table {
+    text-transform: capitalize;
+    background-color: #f7f7f7;
+    width: 100%;
+    border-collapse: collapse;
+    /* box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); */
+    font-size: 15px;
+    box-shadow: -1px 0 10px rgba(0, 0, 0, 0.2),  /* Left shadow */
+                2px 0 10px rgba(0, 0, 0, 0.2),  /* Right shadow */
+                0 5px 10px rgba(0, 0, 0, 0.2);  /* Bottom shadow */
+}
+
+
+.table th, .table td {
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
+    text-align: left;
+    /* border-radius: 50px; */
+}
+
+/* Remove border-radius from the first th element on the left of the table */
+.table th:first-child{
+    border-top-left-radius: 5px;
+    border-left: 1px solid #ccc;
+}
+/* Remove border-radius from the last th elements on the right of the table */
+.table th:last-child{
+    border-top-right-radius: 5px;
+    border-right: 1px solid #ccc;
+}
+/* Remove border-radius from the first th element on the left of the table */
+.table td:first-child{
+    border-left: 1px solid #ccc;
+}
+/* Remove border-radius from the last th elements on the right of the table */
+.table td:last-child{
+    border-right: 1px solid #ccc;
+}
+
+th {
+    background-color: #2f4f4f;
+    color: #fff;
+}
+
+.table tr{
+    border-radius: 20px;
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+.table tbody tr:hover{
+    background-color: #9cb89d;
+    /* transform: scale(1.01); */
+}
+
+form{
+    margin-top: 20px;
+}
+
+.button-con {
+    grid-column: 1 / -1;  /* Makes it span across the grid */
+    display: flex;         /* Use flexbox for alignment */
+    justify-content: flex-end;  /* Align the buttons to the right */
+    margin-top: 10px;      /* Spacing at the top */
+    width: 100%;           /* Ensures the container spans the full width */
+}
+
+.button-con button {
+    margin: 0 10px;        /* Adds space between buttons */
+    width: 100px;          /* Sets the width of the button */
+    padding: 5px;         /* Padding for the button */
+    border-radius: 10px;
+    color: #fff;
+}
+
+.button-con button:nth-child(1) {
+    background-color: #028328;
+}
+
+.button-con button:nth-child(1):hover {
+    background-color: #034f03;
+}
+
+.button-con button:nth-child(2) {
+    background-color: #dc3545;  /* Style for the second button */
+}
+
+.button-con button:nth-child(2):hover {
+    background-color: #b02a37;  /* Hover effect for the second button */
+}
+
+.view-fees-table .table td:last-child {
+    text-align: center; /* Horizontally center the eye icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    /* background-color: #902929; */
+}
+.view-fees-table .table td:last-child button{
+    width: auto;
+    padding: 2px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 116, 31, 0.858);
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 15px;
+}
+.view-fees-table .table td:last-child button:hover{
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    font-size: 13px;
+}
+
+
+.view-fees-table .table td:last-child .view-btn{
+    display: inline-flex; /* Aligns the icon and text */
+    align-items: center;
+    padding: 2px 10px;
+    background-color: #007BFF; /* Choose your desired color */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    /* border: 2px solid #000; */
+    font-size: 15px;
+    font-weight: bold;
+}
+.view-fees-table .table td:last-child .view-btn:hover{
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    font-size: 13px;
+}
+
+.view-fees-table .table td:last-child .delete-btn{
+    display: inline-flex; /* Aligns the icon and text */
+    align-items: center;
+    padding: 2px 10px;
+    background-color: rgba(190, 0, 0, 0.753); /* Choose your desired color */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    /* border: 2px solid #000; */
+    font-size: 15px;
+    font-weight: bold;
+}
+.view-fees-table .table td:last-child .delete-btn:hover{
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    font-size: 13px;
+}
+
+
+/* Tuition fee table */
+.view-tuition-table .table td:last-child {
+    text-align: center; /* Horizontally center the eye icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.view-tuition-table .table td:last-child button{
+    width: 90px;
+    padding: 3px 10px;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 116, 31, 0.858);
+    color: #ffffff;
+    font-size: 15px;
+}
+.view-tuition-table .table td:last-child button:hover{
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    /* color: #fff; */
+    font-size: 14px;
+    width: 80px;
+}
+
+
+
+
+.pagination {
+    margin-top: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination ul {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    gap: 10px;
+}
+
+.pagination ul li {
+    display: inline;
+}
+.pagination ul li a:hover {
+    background-color: rgb(54, 130, 56, 0.5);
+}
+
+.pagination ul li a {
+    text-decoration: none;
+    padding: 5px 12px;
+    border: 1px solid #ccc;
+    color: #333;
+    border-radius: 5px;
+    /* background-color: #04b204; */
+}
+/* Style for Previous and Next pagination links */
+.pagination a.pagination-prev, .pagination a.pagination-next {
+    background-color: #f2f2f2; /* Light gray background */
+    color: #333; /* Dark text */
+    padding: 5px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Background color on hover */
+.pagination a.pagination-prev:hover, .pagination a.pagination-next:hover {
+    background-color: #004d00; /* Dark green when hovered */
+    color: white; /* White text on hover */
+}
+.pagination ul li a.active {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+}
+
+
+/* modal */
+
+/* Add Modal Styles */
+.modal-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999; /* Ensure modal is above everything else */
+}
+
+.modal-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 600px;
+    max-width: 900px;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    /* background-color: #0165bc; */
+    border-bottom: 1.5px solid #bcbcbc;
+}
+
+.close-modal {
+    cursor: pointer;
+    font-size: 29px;
+    color: #333;
+    text-align: right;
+    align-items: center;
+    display: block; /* Ensures it aligns properly */
+}
+
+/* Initially hide the add-fees-container inside modal */
+.add-fees-container {
+    margin-top: 20px;
+}
+
+.modal-overlay .add-button-con{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    /* background-color: #004d00; */
+    margin-top: 20px;
+}
+/* From uiverse.io by @alshahwan */
+.modal-overlay .add-button-con button {
+    background-color: #fff;
+    border: 1px solid #bc2a8d;
+    padding: 1px;
+    position: relative;
+    width: 5em;
+    height: 2em;
+    transition: 0.5s;
+    font-size: 17px;
+    border-radius: 0.4em;
+}
+
+.modal-overlay .add-button-con button p {
+    position: absolute;
+    top: 0.3em;
+    left: 1.4em;
+    margin: 0;
+    padding: 0;
+    transition: .5s;
+    color: #00431d;
+}
+
+.modal-overlay .add-button-con  button img {
+    position: absolute;
+    top: 0.22em;
+    right: 0.3em;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transition: 0.5s;
+    height:25px;
+    /* height: 1em; */
+    align-items: center;
+}
+
+.modal-overlay .add-button-con button:hover p {
+    left: 0.6em;
+    color: #fff
+}
+
+.modal-overlay .add-button-con button:hover img {
+    opacity: 1;
+}
+
+.modal-overlay .add-button-con button:hover {
+    background-color: #0c9400;
+}
+
+
+/* edit tuition modal */
+.edit-tuition-modal {
+    display: none;
+    position: fixed;
+    z-index: 1111111;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-tuition-modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    /* height: 500px; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 0;
+}
+
+.edit-tuition-modal-content .edit-tuition-modal-header h2{
+    margin-bottom: 0;
+    padding-bottom: 5px;
+    border-bottom: 1.5px solid #c0c0c0;
+    /* background-color: #0165bc; */
+}
+.view-title, .event-date-con, .deadline{
+    margin-bottom: 15px;
+}
+.event-date-con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.event-date-con .event-date{
+    width: 100%;
+}
+
+.edit-tuition-modal .button-con{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    /* background-color: #004d00; */
+    margin-top: 10px;
+}
+/* From uiverse.io by @alshahwan */
+.edit-tuition-modal .button-con button {
+    background-color: #fff;
+    border: 1px solid #bc2a8d;
+    padding: 1px;
+    position: relative;
+    width: 5em;
+    height: 2em;
+    transition: 0.5s;
+    font-size: 17px;
+    border-radius: 0.4em;
+}
+
+.edit-tuition-modal .button-con button p {
+    position: absolute;
+    top: 0.3em;
+    left: 1.4em;
+    margin: 0;
+    padding: 0;
+    transition: .5s;
+    color: #00431d;
+}
+
+.edit-tuition-modal .button-con  button img {
+    position: absolute;
+    top: 0.22em;
+    right: 0.3em;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transition: 0.5s;
+    height:25px;
+    /* height: 1em; */
+    align-items: center;
+}
+
+.edit-tuition-modal .button-con button:hover p {
+    left: 0.6em;
+    color: #fff
+}
+
+.edit-tuition-modal .button-con button:hover img {
+    opacity: 1;
+}
+
+.edit-tuition-modal .button-con button:hover {
+    background-color: #0c9400;
+}
+
+
+.edit-tuition-modal-content .close {
+    float: right;
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+.edit-tuition-modal-content .close:hover {
+    color: #df360b;
+}
+
+
+/* edit created payment modal */        
+.EditModal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+}
+
+.Edit-Modal-content {
+    background: #fff;
+    padding: 20px;
+    margin: 10% auto;
+    width: 50%;
+    border-radius: 8px;
+}
+
+.edit-modal-content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px solid #cecece;
+    /* background-color: #007BFF; */
+    padding-bottom: 10px;
+}
+
+.Edit-Modal-content h2{
+    /* background-color: #0165bc; */
+    margin-top: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.EditModal .group1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+.EditModal .group1 .g-box{
+    width: 100%;
+}
+
+.EditModal form input[type='text'],
+.EditModal form input[type='number'],
+.EditModal form input[type='date'],
+.EditModal form select{
+    margin-bottom: 10px;
+}
+
+.EditModal .edit-button-con{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    /* background-color: #004d00; */
+    margin-top: 10px;
+}
+/* .EditModal .edit-button-con button{
+    width: auto;
+} */
+
+/* From uiverse.io by @alshahwan */
+.EditModal .edit-button-con button {
+    background-color: #fff;
+    border: 1px solid #bc2a8d;
+    padding: 1px;
+    position: relative;
+    width: 5em;
+    height: 2em;
+    transition: 0.5s;
+    font-size: 17px;
+    border-radius: 0.4em;
+  }
+  
+  .EditModal .edit-button-con button p {
+    position: absolute;
+    top: 0.3em;
+    left: 1.4em;
+    margin: 0;
+    padding: 0;
+    transition: .5s;
+    color: #00431d;
+  }
+  
+  .EditModal .edit-button-con  button img {
+    position: absolute;
+    top: 0.22em;
+    right: 0.3em;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transition: 0.5s;
+    height:25px;
+    /* height: 1em; */
+    align-items: center;
+  }
+  
+  .EditModal .edit-button-con button:hover p {
+    left: 0.6em;
+    color: #fff
+  }
+  
+  .EditModal .edit-button-con button:hover img {
+    opacity: 1;
+  }
+  
+  .EditModal .edit-button-con button:hover {
+    background-color: #0c9400;
+  }
+  
+/* From uiverse.io by @alshahwan */
+.EditModal .edit-button-con .cancel-button {
+    background-color: #fff;
+    border: 1px solid #bc2a8d;
+    padding: 1px;
+    position: relative;
+    width: 5.8em;
+    height: 2em;
+    transition: 0.5s;
+    font-size: 17px;
+    border-radius: 0.4em;
+  }
+  
+  .EditModal .edit-button-con .cancel-button p {
+    position: absolute;
+    top: 0.3em;
+    left: 1.4em;
+    margin: 0;
+    padding: 0;
+    transition: .5s;
+    color: #00431d;
+  }
+  
+  .EditModal .edit-button-con  .cancel-button img {
+    position: absolute;
+    top: 0.22em;
+    right: 0.3em;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transition: 0.5s;
+    height:25px;
+    /* height: 1em; */
+    align-items: center;
+  }
+  
+  .EditModal .edit-button-con .cancel-button:hover p {
+    left: 0.6em;
+    color: #fff
+  }
+  
+  .EditModal .edit-button-con .cancel-button:hover img {
+    opacity: 1;
+  }
+  
+  .EditModal .edit-button-con .cancel-button:hover {
+    background-color: #952c03;
+  }
+  
+/* delete confirmation modal */
+.delete-modal{
+    display:none; 
+    position:fixed; 
+    top:0; 
+    left:0; 
+    width:100%; 
+    height:100%; 
+    background:rgba(0,0,0,0.5); 
+    z-index:9999;
+}
+.delete-modal-content{
+    background:rgb(239, 239, 239);
+    padding:20px; 
+    margin:15% auto; 
+    width:100%; 
+    max-width:430px; 
+    border-radius:8px; 
+    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+}
+.delete-modal-content .par{
+    background-color: #fff;
+    padding: 20px 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    font-weight: bold;
+    /* border: 1px solid #000; */
+    border-radius: 10px;
+    box-shadow: 2px 10px 15px -3px rgba(0, 0, 0, 0.1), 2px 4px 6px -2px rgba(0, 0, 0, 0.1);
+}
+.delete-modal-content form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.delete-modal-content form .no-button{
+    width: 120px;
+    background-color: #0165bc;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+}
+.delete-modal-content form .no-button:hover{
+    width: 100px;
+    font-size: 15px;
+}
+.delete-modal-content form .yes-button{
+    width: 120px;
+    background-color: #ba1300;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+}
+.delete-modal-content form .yes-button:hover{
+    width: 100px;
+    font-size: 15px;
+}
+
+
+/* viewModal */
+.view-modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 1000; /* Ensure it appears on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Container */
+.view-modal-container {
+    background: #fff; /* White background */
+    margin: 10% auto; /* Center the modal */
+    padding: 20px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    max-width: 600px; /* Limit width */
+    animation: fadeIn 0.3s ease-in-out; /* Smooth fade-in animation */
+}
+
+/* Modal Header */
+.view-modal-container .modal-header {
+    display: flex;
+    justify-content: space-between; /* Space between label and close button */
+    align-items: center; 
+    border-bottom: 1px solid #ddd; /* Header separator */
+    padding-bottom: 1px;
+    margin-bottom: 20px;
+    padding-top: 0;
+    /* background-color: #004d00; */
+}
+
+.view-modal-container .modal-header label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 0;
+    /* margin: 0; */
+}
+
+/* Close Button (×) */
+.view-modal-container .close-view-modal {
+    font-size: 1.04rem;
+    cursor: pointer;
+    color: #ffffff;
+    transition: color 0.2s;
+    background-color: #b72602;
+    padding: 2px 10px;
+    margin-top: 10px;   
+    margin-bottom: 5px;   
+    border-radius: 10px;
+    border: 1px solid #000;
+    /* height: 70px; */
+}
+
+.view-modal-container .close-view-modal:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .90rem;
+}
+
+/* Modal Content */
+.view-modal-container .view-modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between rows */
+}
+
+/* Input Rows */
+.view-modal-container .view-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.view-modal-container .view-row label {
+    font-weight: 600;
+    flex: 1; /* Make labels flexible */
+}
+
+/* Input Fields */
+.view-modal-container .view-row input {
+    flex: 2; /* Input takes more space */
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-transform: capitalize;
+    background-color: #f9f9f9; /* Light grey background */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+.custom-dropdown {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.custom-dropdown .selected-options {
+    padding: 1px;
+}
+
+.custom-dropdown .dropdown-options {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #262626;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    font-size: 10px;
+}
+
+.custom-dropdown.open .dropdown-options {
+    /* display: flex; */
+    display: block;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; /* Aligns items to the left */
+}
+
+.custom-dropdown .option {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between checkbox and label */
+    padding: 5px;
+    border-bottom: 1px solid #a5a5a5;
+}
+
+.custom-dropdown .option input[type="checkbox"] {
+    width: 12px; /* Reduce checkbox size */
+    height: 12px;
+    transform: scale(0.9); /* Slightly reduces size */
+    margin-left: 5px; /* Ensures space from the dropdown border */
+    margin-left: -40px;
+    margin-right: -30px;
+}
+.level input[type="hidden"]{
+    font-size: 10px;
+}

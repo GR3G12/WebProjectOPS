@@ -1,0 +1,229 @@
+.set-container{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+.set-header{
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+.set-button{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    padding: 5px 0;
+}
+
+.set-button button{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    /* color: #fff; */
+    font-weight: bold;
+    font-size: 25px;
+    border: none;
+    border-radius: 2px;
+    /* background-color: rgba(25, 193, 3, 0.689); */
+    background-color: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+}
+.set-button button:hover{
+    background-color: rgb(28, 205, 1);
+    /* background-color: #fff; */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+}
+
+
+
+.transaction-b, .student-list-b{
+    height: 35px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    /* padding-bottom: 10px; */
+}
+/* for hover the button when active */
+/* Default hover style for the button */
+.transaction-b:hover, .student-list-b:hover {
+    background-color: #004e08; /* Choose your desired hover color */
+    color: #fff; /* Optional: Change text color on hover */
+    cursor: pointer; /* Indicate it's clickable */
+    /* Add any other hover styles you want */
+}
+
+/* Hover style when the transaction history is active */
+.transaction-b.active-hover:hover, .student-list-b.active-hover:hover  {
+    background-color: #004e08; /* Choose your desired hover color */
+    color: #fff; /* Optional: Change text color on hover */
+    cursor: pointer;
+}
+
+/* Remove default hover when active-hover is applied */
+.transaction-b.active-hover, .student-list-b.active-hover {
+    background-color: #004e08; /* Choose your desired hover color */
+    color: #fff; /* Optional: Change text color on hover */
+}
+
+.transaction-b:not(.active-hover):hover, .student-list-b:not(.active-hover):hover {
+    background-color: none; /* Choose your desired hover color */
+}
+
+
+.transaction-history, .student-list{
+    /* background-color: #ffffff; */
+    border-radius: 5px;
+}
+.transaction h3{
+    margin-bottom: 1px;
+    font-weight: lighter;
+}
+.transaction-filter{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    gap: 10px;
+}
+.specific-fee{
+    height: 30px;
+    width: 250px;
+}
+.search{
+    height: 30px;
+    width: 40%;
+}
+
+.year-level,
+.course,
+.section{
+    height: 30px;
+    width: 100px;
+}
+
+.reset-btn{
+    background-color: transparent;
+    border: none;
+}
+
+.date{
+    margin-bottom: 10px;
+}
+
+
+
+/* table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-collapse: separate; /* Separate borders to apply radius */
+    border-spacing: 0; /* Remove spacing between cells */
+    border-radius: 10px; /* Adjust radius as needed */
+    /* overflow: hidden; */
+    width: 100%;
+    /* border: 2px solid #ddd;  */
+}
+.table thead{
+    padding-bottom: 10px;
+}
+.table th, .table td {
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
+    text-align: left;
+    /* border-radius: 50px; */
+}
+
+/* Remove border-radius from the first th element on the left of the table */
+.table th:first-child{
+    border-top-left-radius: 5px;
+    border-left: 1px solid #ccc;
+}
+/* Remove border-radius from the last th elements on the right of the table */
+.table th:last-child{
+    border-top-right-radius: 5px;
+    border-right: 1px solid #ccc;
+}
+/* Remove border-radius from the first th element on the left of the table */
+.table td:first-child{
+    border-left: 1px solid #ccc;
+}
+/* Remove border-radius from the last th elements on the right of the table */
+.table td:last-child{
+    border-right: 1px solid #ccc;
+}
+.table th {
+    background-color: #2f4f4f;
+    color: #fff;
+    align-items: center;
+    text-align: left;
+    /* margin-bottom: 10px; */
+}
+
+.table tr{
+    border-radius: 20px;
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+.table tbody tr:hover{
+    background-color: #9cb89d;
+    transform: scale(1.01); /* Enlarges the card to 105% */
+}
+
+/* .transaction-table .table td:last-child {
+    text-align: center;
+    vertical-align: middle;
+    width: 55px;
+} */
+
+.transaction-table .table td:last-child i {
+    font-size: 18px; /* Optional: Adjust icon size */
+    cursor: pointer; /* Optional: Add a pointer cursor */
+}
+td .view-btn{
+    font-size: 19px;
+    border: none;
+    background-color: transparent;
+}
+
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination ul {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    gap: 10px;
+}
+
+.pagination ul li {
+    display: inline;
+}
+
+.pagination ul li a {
+    text-decoration: none;
+    padding: 5px 12px;
+    border: 1px solid #ccc;
+    color: #333;
+    border-radius: 5px;
+}
+.pagination ul li a:hover {
+    background-color: rgb(54, 130, 56, 0.5);
+}
+
+.pagination ul li a.active {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+}

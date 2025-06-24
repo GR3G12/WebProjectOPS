@@ -1,0 +1,481 @@
+.paynow{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.paynow-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: 10px; */
+}
+.paynow-header h2{
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.button-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* upload From Uiverse.io by vinodjangid07 */ 
+.print-Btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    /* border: 1px solid #0a4d00; */
+    background-color: #fff;
+  }
+  
+  /* plus sign */
+.print-Btn .sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.print-Btn .sign img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
+  }
+  
+  /* text */
+.print-Btn .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: rgb(0, 90, 21);
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+    width: 110px;
+  }
+  /* hover effect on button width */
+.print-Btn:hover {
+    width: 120px;
+    border-radius: 40px;
+    transition-duration: .3s;
+  }
+  
+.print-Btn:hover .sign {
+    width: 20%;
+    transition-duration: .3s;
+    padding-left: 20px;
+  }
+  /* hover effect button's text */
+.print-Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+    justify-content: center;
+    font-weight: bold;
+  }
+/* button click effect*/
+.print-Btn:active {
+    transform: translate(2px ,2px);
+  }
+
+.paynow h3{
+    padding: 0;
+    margin: 0;
+    margin-top: 15px;
+}
+.paynow .top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Increased gap for better spacing */
+    margin-bottom: 10px;
+    padding: 10px; /* Added padding for better aesthetics */
+    /* background-color: #f8f9fa; */
+    border-radius: 10px;
+}
+
+.paynow .top .content {
+    flex: 1 1 auto;
+    background-color: #789c78; /* Retained the green theme */
+    color: white; /* Ensures text is visible */
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    justify-content: center; /* Center the content */
+    align-items: center; /* Center horizontally */
+    text-align: center;
+    border-radius: 10px;
+    height: 85px; /* Slightly increased height for better spacing */
+    width: 150px; /* Standardized width */
+    padding: 2px; /* Added padding for better text spacing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slight shadow for individual cards */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.paynow .top .content:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    /* background-color: #3e6d3e; */
+}
+
+.paynow .top .content h2 {
+    font-size: 23px; /* Increased size for emphasis */
+    font-weight: bold; /* Added weight for better visibility */
+    margin: 0; /* Added spacing between text */
+}
+
+.paynow .top .content label {
+    font-size: 13px; /* Slightly increased size for readability */
+    font-weight: 500; /* Medium weight for better styling */
+    color: #1b481b;
+    font-weight: bold;
+}
+
+.paynow .middle{
+    height: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* overflow: hidden; */
+    gap: 10px;
+}
+.middle .table-con{
+    background-color: #648364;
+    border-radius: 20px;
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* max-width: 400px;  */
+    height: 100%;     /* Set a fixed height */
+    margin: 0 auto;    /* Center the chart */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.middle .middle-con{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 5px;
+    width: 100%;
+    /* max-width: 400px; */
+    height: 100%;     /* Set a fixed height */
+}
+.middle .bottom-con{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 5px;
+    width: 100%;
+    /* max-width: 400px; */
+    height: 100%;     /* Set a fixed height */
+}
+.bottom{
+    width: 100%;
+}
+.bottom h3{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+}
+.middle .pie-graph-con{
+    background-color: #648364;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+    width: 100%;
+    /* max-width: 400px; */
+    height: 350px; 
+    /* margin: 0 auto;  */
+}
+.student-pay{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.student-pay .content-con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #2a322a; */
+    width: 100%;
+   flex-wrap: wrap;
+    /* padding: 10px; */
+    gap: 5px;
+    margin-bottom: 5px;
+}
+.content-con .content{
+    background-color: #789c78;
+    height: 100px;
+    /* padding: 2px; */
+    /* margin: 0; */
+    text-align: center;
+    border-radius: 10px;
+    flex: 1 1 auto;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
+}
+.content-con .content:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    /* background-color: #3e6d3e; */
+}
+.content-con .content h2{
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+.content-con .content label{
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: #252725;
+}
+
+.table-wrapper {
+    background-color: #dfe099;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0;
+    height: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* flex: 1; */
+}
+
+.table-wrapper h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #2f552f;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+table thead tr:first-child th:first-child,
+table tbody tr:first-child td:first-child {
+    border-top-left-radius: 5px;
+}
+
+table thead tr:first-child th:last-child,
+table tbody tr:first-child td:last-child {
+    border-top-right-radius: 5px;
+}
+
+table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 5px;
+}
+
+table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 5px;
+}
+
+table thead th {
+    background-color: #528552;
+    color: white;
+    padding: 5px;
+    border-bottom: 1px solid #ffffff;
+}
+
+table tbody td {
+    text-align: center;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #e8f5e8; /* Light green for alternate rows */
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #f9fafb; /* Light grey for alternate rows */
+}
+
+
+
+/* @media print {
+    *{
+        font-size: 10px;
+        background-color: transparent;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    .no-print {
+        display: none;
+    }
+    .button-header{
+        display: none;
+    }
+    h2, label{
+        font-size: 10px;
+    }
+    .paynow .top .content{
+        font-size: 8px;
+    }
+} */
+@media print {
+    *,
+    ::after,
+    ::before {
+        /* background: transparent !important; */
+        color: #000 !important; /* Black text for better readability */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: 10pt; /* Adjust base font size for print */
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+
+    .button-header {
+        display: none !important;
+    }
+
+    .paynow {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: visible !important; /* Ensure content isn't hidden */
+    }
+
+    .paynow-header {
+        display: block; /* Stack header elements */
+        text-align: center; /* Center the title */
+        margin-bottom: 1em;
+    }
+
+    .paynow-header h2 {
+        font-size: 14pt; /* Adjust header font size */
+    }
+
+    .paynow h3 {
+        font-size: 12pt;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+    }
+
+    .paynow .top {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 0.5em;
+        margin-bottom: 1em;
+        padding: 0.5em;
+        border: 1px solid #ccc; /* Add borders if needed for separation */
+    }
+
+    .paynow .top .content {
+        flex: 0 1 auto;
+        /* width: calc(50% - 0.5em); Try to fit two side-by-side */
+        min-width: 50px; /* Ensure a minimum width */
+        height: auto;
+        padding: 0.5em;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    .paynow .top .content h2 {
+        font-size: 1.2em;
+        margin-bottom: 0.2em;
+    }
+
+    .paynow .top .content label {
+        font-size: 0.9em;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .middle,
+    .bottom-con {
+        display: flex; /* Stack middle and bottom sections */
+        margin-bottom: 1em;
+        break-inside: avoid;
+    }
+
+    .middle .middle-con,
+    .bottom-con .student-pay {
+        display: flex; /* Stack elements within these containers */
+    }
+
+    .middle .pie-graph-con,
+    .bottom-con .student-pay .pie-graph-con {
+        width: 50%;
+        height: auto; /* Adjust height automatically */
+        margin-bottom: 1em;
+        flex-direction: column;
+    }
+
+    .middle .table-con,
+    .bottom-con .student-pay .table-con {
+        width: 50%;
+        margin-bottom: 1em;
+    }
+
+    .table-wrapper {
+        padding: 0.5em;
+        border: 1px solid #ccc;
+    }
+
+    .table-wrapper h3 {
+        font-size: 1em;
+        text-align: center;
+        margin-bottom: 0.5em;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.8em;
+    }
+
+    table th,
+    table td {
+        padding: 0.3em;
+        border: 1px solid #ddd;
+        text-align: center;
+    }
+
+    table thead th {
+        background-color: #f0f0f0 !important; /* Light background for header */
+        color: #333 !important;
+    }
+}
