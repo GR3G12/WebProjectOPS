@@ -1,0 +1,417 @@
+* {
+    font-family: 'Piazzolla', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.green {
+    background-color: #003E29;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.green form {
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    align-items: center; /* Center items horizontally */
+    background-color: transparent;
+}
+
+
+.title-logo{
+    display: none;
+}
+
+h1 {
+    color: rgba(197, 216, 147);
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+input[type="text"],
+input[type="password"] {
+    background-color: transparent;
+    color: rgba(197, 216, 147);
+    font-size: 15px;
+    /* color: #000; */
+    width: 100%;
+    padding: 10px;
+    margin-top: 30px;
+    border: none;
+    /* outline: 1px solid rgba(197, 216, 147); */
+    border-radius: 100px;
+    /* border: 1px solid rgba(197, 216, 147); */
+    /* box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2); */
+    
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.3),
+                inset -5px -5px 10px rgba(0, 0, 0, 0.3);
+    transition: 300ms ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    /* background-color: #ffffff; */
+    transform: scale(1.05);
+    box-shadow: 13px 13px 100px #000000, -13px -13px 100px #020000;
+}
+
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: rgba(197, 216, 147);
+    font-size: 15px;
+    opacity: 1;
+    font-style: italic;
+}
+
+.forgot-password {
+    align-self: flex-end; /* Align to the right */
+    margin: 10px 0;
+    text-decoration: none;
+    color: rgba(197, 216, 147);
+    font-style: italic;
+}
+
+.forgot-password:hover {
+    color: #ffffff;
+}
+
+ /* From Uiverse.io by iZOXVL */ 
+.btn {
+    width: 60%;
+    padding: 5px 10px;
+    background-color: transparent;
+    color: rgba(197, 216, 147);
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: 1px solid rgba(197, 216, 147); 
+    border-radius: 30px;
+    transition: all 0.4s ease;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    margin-top: 20px; 
+  }
+  
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0) 70%
+    );
+    transform: scale(0);
+    transition: transform 0.5s ease;
+  }
+  
+.btn:hover::after {
+    transform: scale(4);
+  }
+  
+.btn:hover {
+    border-color: #073a00;
+    background: #093603;
+    color: #fff;
+  }
+  
+
+.yellow {
+    background-image: url("img/ACTS_OPS_v4.png");
+    background-position: center;
+    background-size: cover;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-right {
+    text-align: center;
+    color: #003E29;
+}
+
+.header-right h1 {
+    font-size: 28px;
+    font-weight: bold;  
+    margin: 10px 0;
+    color: #003E29;
+    font-style: italic;
+}
+
+.header-right h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 0;
+    font-style: italic;
+}
+
+.header-right span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    font-style: italic;
+}
+
+/* Loading indicator container */
+/* Loading indicator container */
+.loading-indicator {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    z-index: 1000; /* Ensure it appears above other elements */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Spinner container (this will scale up and down) */
+.loading-indicator .spinner-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: scalle 2s ease-in-out infinite; /* Apply scaling animation to the container */
+}
+
+/* Spinner styling (fixed size) */
+.spinner {
+    width: 150px;
+    height: 150px;
+    border: 8px solid #ccc; /* Light gray border */
+    border-top: 8px solid #4caf50; /* Green color for the rotating part */
+    border-radius: 50%;
+    animation: spin 1s linear infinite; /* Apply spinning animation to the spinner */
+    position: relative;
+}
+
+/* Keyframe for the spinner rotation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg); /* Start at 0 degrees */
+    }
+    100% {
+        transform: rotate(360deg); /* Complete one full rotation */
+    }
+}
+
+/* Keyframe for scaling (big to small and back) */
+@keyframes scalle {
+    0% {
+        transform: scale(1); /* Start at original size */
+    }
+    50% {
+        transform: scale(1.5); /* Grow the container to 1.5 times its size */
+    }
+    100% {
+        transform: scale(1); /* Shrink back to original size */
+    }
+}
+
+/* Set the image as the background inside the container */
+.spinner-con {
+    background-image: url('img/ACTS_LOGO.png'); /* Path to your image */
+    background-size: 143px; /* Adjust size of the background image */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 480px), (max-width: 768px){
+    .container {
+        flex-direction: column; /* Stack divs vertically */
+        height: 100vh;
+        position: relative; /* Ensure relative positioning */
+    }
+
+    .green,
+    .yellow {
+        width: 100%; /* Full width */
+        height: 100vh;
+    }
+
+    .green{
+        order: 2;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        /* height: auto; */
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px; /* Add padding for spacing */
+        z-index: 10; 
+        background-color: transparent;
+        /* background-color: #003E29; */
+    }
+
+    .yellow {
+        /* overflow: hidden; */
+        order: 1; /* Set order for mobile */
+        flex-grow: 1; 
+        background-image: url("img/backdesign.png");
+    }
+
+    .yellow::before {
+        content: ''; /* Necessary for pseudo-element */
+        position: absolute; /* Position it over the yellow background */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.3); /* Light white overlay */
+        backdrop-filter: blur(2px);
+        z-index: 1; /* Ensure it sits above the background but below text */
+    }
+
+    .yellow > * {
+        position: relative; /* Position child elements above the blur */
+        z-index: 2; /* Ensure child elements are above the blur effect */
+    }
+
+    .green form {
+        width: 99%; /* Full width of form */
+        /* background-color: rgba(255, 255, 255, 0.9); */
+        border-radius: 5px;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 22px; /* Adjust font size */
+        color: #003E29;
+    }
+
+    .title-logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .title-logo h1{
+        padding: 0;
+        margin: 0;
+    }
+
+    .title-title{
+        display: none;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%; /* Slightly smaller width for better spacing */
+        padding: 10px; /* Increase padding for comfort */
+        margin-top: 20px; /* Reduce top margin */
+        font-size: 14px; /* Adjust button font size */
+        color: #000;
+        /* border: 1px solid #003E29; */
+        background-color: rgba(255, 255, 255);
+    }
+
+    input[type="text"]::placeholder,
+    input[type="password"]::placeholder {
+        color: #000;
+        font-size: 15px;
+        opacity: 1;
+        font-style: italic;
+    }
+    
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+        /* background-color: #ffffff; */
+        transform: scale(1.05);
+        box-shadow: 13px 13px 100px #a5a4a4, -13px -13px 100px #878787;
+    }
+
+    .btn {
+        font-size: 18px; /* Adjust button font size */
+        font-weight: bold;
+        padding: 5px; /* Adjust padding */
+        width: 150px;
+        /* border: 1px solid #003E29; */
+        /* box-shadow: inset; */
+        /* color: #00460d; */
+        /* background-color: #fff; */
+        background-color: #073c00;
+    }
+    /* From Uiverse.io by xueyuantan */ 
+    button {
+        width: 9em;
+        height: 2em;
+        border-radius: 30em;
+        font-size: 15px;
+        font-family: inherit;
+        border: none;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        box-shadow: 6px 6px 12px #c5c5c5,
+                    -6px -6px 12px #ffffff;
+    }
+    
+    button::before {
+        content: '';
+        width: 0;
+        height: 2em;
+        border-radius: 30em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+        transition: .5s ease;
+        display: block;
+        z-index: -1;
+    }
+    
+    button:hover::before {
+        width: 9em;
+    }
+
+    .forgot-password {
+        /* margin-right: 50px; */
+        color: #000;
+    }
+    .forgot-password:hover {
+        color: #4dbd25;
+    }
+
+}
+
+.error-message {
+    color: #ff0000;
+    background-color: transparent;
+    /* border: 1px solid #ff0000; */
+    padding: 10px;
+    /* border-radius: 5px; */
+    text-align: center;
+}

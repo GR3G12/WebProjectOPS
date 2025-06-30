@@ -1,0 +1,10 @@
+{
+    "name": "acts-ops/online-payment-system",
+    "description": "Your project description",
+    "version": "1.0.0",
+    "require": {
+        "php": ">=7.3",
+        "phpoffice/phpspreadsheet": "^4.0",
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
